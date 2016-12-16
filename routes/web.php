@@ -14,3 +14,5 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/channels/{channel}', 'ChannelController@show')->name('channel.show');
