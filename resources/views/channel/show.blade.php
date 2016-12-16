@@ -1,4 +1,8 @@
-<h1>{{ $channel->name }}</h1>
+@extends('layouts.frontend')
+
+@section('title', $channel->name)
+
+@section('content')
 <ul>
 	@foreach ($channel->slides->sortBy('updated_at') as $slide)
 		<li>
@@ -8,3 +12,4 @@
 		</li>
 	@endforeach
 </ul>
+@endsection
