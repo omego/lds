@@ -13,9 +13,9 @@
         <div class="container-fluid">
             @yield('content')
         </div>
+        <script src="{{asset('js/app.js')}}"></script>
+        <script>
+            @yield('script')
+        </script>
     </body>
-    <script src="{{asset('js/app.js')}}"></script>
-    <script>
-        @yield('script')
-    </script>
 </html>
