@@ -16,6 +16,6 @@ require('laravel-elixir-vue-2');
 elixir(mix => {
     mix.sass('app.scss')
        .webpack('app.js')
-       .copy('node_modules/bxslider/dist/jquery.bxslider.min.css', 'public/css')
+       .copy('node_modules/slick-carousel/slick/slick.css', 'public/css')
        .copy('node_modules/font-awesome/fonts/**', 'public/fonts');
 });

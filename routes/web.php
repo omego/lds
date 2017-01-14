@@ -11,9 +11,5 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/channels', 'ChannelController@index')->name('channel.index');
-Route::get('/channels/{channel}', 'ChannelController@show')->name('channel.show');
+Route::get('/', 'FrontendController@index')->name('frontend.index');
+Route::get('/channels/{channel}', 'FrontendController@showChannel')->name('frontend.channel');

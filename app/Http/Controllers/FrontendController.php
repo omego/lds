@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Channel;
 
-class ChannelController extends Controller
+class FrontendController extends Controller
 {
     /**
      * Show the list of channels.
@@ -15,7 +15,7 @@ class ChannelController extends Controller
      */
     public function index()
     {
-        return view('channel.index', [
+        return view('frontend.index', [
 			'channels' => Channel::get()
 		]);
     }
@@ -26,9 +26,9 @@ class ChannelController extends Controller
      * @param  Channel  $channel
      * @return Response
      */
-    public function show(Channel $channel)
+    public function showChannel(Channel $channel)
     {
-        return view('channel.show', [
+        return view('frontend.channel', [
 			'channel' => $channel
 		]);
     }

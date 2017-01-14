@@ -6,7 +6,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
-@import url(jquery.bxslider.min.css);
+@import url(slick.css);
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -10731,6 +10731,35 @@ button.close {
   margin: 0;
   overflow: visible;
   clip: auto;
+}
+
+.slider {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background: #ffffff;
+}
+
+.slider .slide {
+  height: 100vh;
+  width: 100vw;
+  padding: 20px 40px;
+}
+
+.no-slides {
+  text-align: center;
+  font-size: 50px;
+  height: 100vh;
+}
+
+.no-slides p {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  font-size: 5vw;
+  font-weight: 300;
+  color: #aaaaaa;
 }
 
 /*# sourceMappingURL=app.css.map */
