@@ -13,3 +13,7 @@
 
 Route::get('/', 'FrontendController@index')->name('frontend.index');
 Route::get('/channels/{channel}', 'FrontendController@showChannel')->name('frontend.channel');
+
+Auth::routes();
+
+Route::get('/backend', 'BackendController@index')->name('backend.dashboard');

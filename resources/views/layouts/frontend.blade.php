@@ -1,17 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>@yield('title') | {{ Config::get('app.name') }}</title>
-        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    </head>
-    <body>
-        @yield('content')
-        <script src="{{asset('js/app.js')}}"></script>
-        <script>
-            @yield('script')
-        </script>
-    </body>
-</html>
+@extends('layouts.base')
+
+@section('layout_content')
+	<nav class="navbar navbar-default navbar-static-top">
+		<div class="container">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="{{ route('frontend.index') }}">
+					<i class="fa fa-television"></i> {{ config('app.name', 'Laravel') }}
+				</a>
+			</div>
+		</div>
+	</nav>
+	<div class="container">
+		@yield('content')
+	</div>
+@endsection
