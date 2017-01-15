@@ -22,6 +22,6 @@
 			</tbody>
 		</table>
 	@else
-		<div class="alert alert-info" role="alert">No Channels have been defined yet.</div>
+		<div class="alert alert-info" role="alert">@lang('ds.no_channels_added')</div>
 	@endif
 @endsection

@@ -15,13 +15,13 @@
 			<tbody>
 				@foreach ($slides->sortByDesc('updated_at') as $slide)
 					<tr>
-						<td>{{ $slide->name }}</td>
+						<td><a href="{{ route('backend.slides.edit', $slide) }}">{{ $slide->name }}</a></td>
 						<td class="fit" title="{{ $slide->updated_at->format(config('app.date_format')) }}">{{ $slide->updated_at->diffForHumans() }}</td>
 					</tr>
 				@endforeach
 			</tbody>
 		</table>
 	@else
-		<div class="alert alert-info" role="alert">No Slides have been added yet.</div>
+		<div class="alert alert-info" role="alert">@lang('ds.no_slides_added')</div>
 	@endif
 @endsection

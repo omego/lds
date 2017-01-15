@@ -36,3 +36,5 @@ Route::get('/backend/channels/edit/{channel}', 'Backend\ChannelsController@edit'
 Route::post('/backend/channels/edit/{channel}', 'Backend\ChannelsController@update')->name('backend.channels.update');
 
 Route::get('/backend/slides', 'Backend\SlidesController@index')->name('backend.slides');
+Route::get('/backend/slides/edit/{slide}', 'Backend\SlidesController@edit')->name('backend.slides.edit');
+Route::post('/backend/slides/edit/{slide}', 'Backend\SlidesController@update')->name('backend.slides.update');

@@ -44,6 +44,6 @@ class ChannelsController extends Controller
 		$channel->save();
 
 		return redirect()->route('backend.channels')
-				->with('success', 'Household has been updated!');
+				->with('success', trans('ds.channel_updated'));
     }
 }
