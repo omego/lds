@@ -49,7 +49,12 @@
 				<div class="panel panel-default">
 					<div class="panel-heading">@lang('ds.style_options')</div>
 					<div class="panel-body">
-						{{ Form::bsText('background_color', null, trans('base.background_color')) }}
+						<div class="form-group">
+							{{ Form::label('background_color', trans('base.background_color'), ['class' => 'control-label']) }}
+							<div class="input-group colorpicker-component">
+								{{ Form::text('background_color', null, ['class' => 'form-control']) }} <span class="input-group-addon"><i></i></span>
+							</div>
+						</div>
 						{{ Form::bsText('background_image', null, trans('base.background_image')) }}
 					</div>
 				</div>
@@ -65,6 +70,9 @@
 
 @section('script')
 	$(document).ready(function(){
+		$('.colorpicker-component').colorpicker({
+			 colorSelectors: { 'black': '#000000', 'white': '#ffffff', 'red': '#FF0000', 'default': '#777777', 'primary': '#337ab7', 'success': '#5cb85c', 'info': '#5bc0de', 'warning': '#f0ad4e', 'danger': '#d9534f' }
+		});
 		tinymce.init({ selector:'textarea',
 			menubar: false,
 			height: 400,
