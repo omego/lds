@@ -7,7 +7,7 @@
 		<div class="col-md-6">
 			<h2>Frontend</h2>
 			<div class="panel panel-default">
-				<div class="panel-heading">Channels</div>
+				<div class="panel-heading">@lang('ds.channels')</div>
 				<ul class="list-group">
 					@foreach ($channels->sortBy('name') as $channel)
 						<li class="list-group-item">

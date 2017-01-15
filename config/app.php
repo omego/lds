@@ -181,6 +181,7 @@ return [
 		Cviebrock\EloquentSluggable\ServiceProvider::class,
 		
 		Jenssegers\Date\DateServiceProvider::class,
+		Laravelista\Ekko\EkkoServiceProvider::class,
     ],
 
     /*
@@ -229,6 +230,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 		'Date' => Jenssegers\Date\Date::class,
+		'Ekko' => Laravelista\Ekko\Facades\Ekko::class,
     ],
 
 ];

@@ -1,20 +1,22 @@
 @extends('layouts.backend')
 
-@section('title', 'Slides')
+@section('title', trans('ds.slies'))
 
 @section('content')
-	<h2>Slides</h2>
+	<h2>@lang('ds.slides')</h2>
 	@if (count($slides) > 0)
 		<table class="table table-condensed table-bordered table-striped">
 			<thead>
 				<tr>
-					<th>Name</th>
+					<th>@lang('base.name')</th>
+					<th class="fit">@lang('base.last_changed')</th>
 				</tr>
 			</thead>
 			<tbody>
-				@foreach ($slides->sortBy('name') as $slide)
+				@foreach ($slides->sortByDesc('updated_at') as $slide)
 					<tr>
 						<td>{{ $slide->name }}</td>
+						<td class="fit" title="{{ $slide->updated_at }}">{{ $slide->updated_at->diffForHumans() }}</td>
 					</tr>
 				@endforeach
 			</tbody>

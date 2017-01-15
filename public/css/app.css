@@ -10737,6 +10737,12 @@ body.backend {
   background: #ffffff;
 }
 
+.table td.fit,
+.table th.fit {
+  white-space: nowrap;
+  width: 1%;
+}
+
 .slider {
   position: relative;
   height: 100vh;

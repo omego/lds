@@ -24,8 +24,8 @@
 			<div class="collapse navbar-collapse" id="app-navbar-collapse">
 				<!-- Left Side Of Navbar -->
 				<ul class="nav navbar-nav">
-					<li class=""><a href="{{ route('backend.channels') }}">Channels</a></li>
-					<li class=""><a href="{{ route('backend.slides') }}">Slides</a></li>
+					<li class="{{ isActiveRoute('backend.channels') }}"><a href="{{ route('backend.channels') }}">@lang('ds.channels')</a></li>
+					<li class="{{ isActiveRoute('backend.slides') }}"><a href="{{ route('backend.slides') }}">@lang('ds.slides')</a></li>
 				</ul>
 
 				<!-- Right Side Of Navbar -->
