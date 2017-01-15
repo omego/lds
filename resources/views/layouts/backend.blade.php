@@ -26,6 +26,7 @@
 				<ul class="nav navbar-nav">
 					<li class="{{ areActiveRoutes(['backend.channels', 'backend.channels.edit']) }}"><a href="{{ route('backend.channels') }}">@lang('ds.channels')</a></li>
 					<li class="{{ areActiveRoutes(['backend.slides', 'backend.slides.edit']) }}"><a href="{{ route('backend.slides') }}">@lang('ds.slides')</a></li>
+					<li class="{{ areActiveRoutes(['backend.settings']) }}"><a href="{{ route('backend.settings') }}">@lang('ds.settings')</a></li>
 				</ul>
 
 				<!-- Right Side Of Navbar -->

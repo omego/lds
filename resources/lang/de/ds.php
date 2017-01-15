@@ -14,5 +14,7 @@ return [
 	'edit_slide'         => 'Folie bearbeiten',
 	'slide_updated'      => 'Folie wurde aktualisiert!',
 	'no_slides_added'    => 'Es wurden noch keine Folien hinzugefügt.',
-
+	
+	'settings'           => 'Einstellungen',
+	'settings_updated'   => 'Die Einstellungen wurden aktualisiert!',
 ];

@@ -15,4 +15,6 @@ return [
 	'slide_updated'      => 'Slide has been updated!',
 	'no_slides_added'    => 'No Slides have been added yet.',
 
+	'settings'           => 'Settings',
+	'settings_updated'   => 'Settings has been updated!',
 ];
