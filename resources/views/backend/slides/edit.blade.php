@@ -38,6 +38,14 @@
 						-->
 					</div>
 				</div>
+
+				<div class="panel panel-default">
+					<div class="panel-heading">@lang('ds.channels')</div>
+					<div class="panel-body">
+						{{ Form::bsMultiCheckbox('channels[]', $channels) }}
+					</div>
+				</div>
+
 				<div class="panel panel-default">
 					<div class="panel-heading">@lang('ds.style_options')</div>
 					<div class="panel-body">

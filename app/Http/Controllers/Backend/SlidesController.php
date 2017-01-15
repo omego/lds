@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreSlide;
 
 use App\Slide;
+use App\Channel;
 
 class SlidesController extends Controller
 {
@@ -34,7 +35,8 @@ class SlidesController extends Controller
     public function edit(Slide $slide)
     {
         return view('backend.slides.edit', [
-			'slide' => $slide
+			'slide' => $slide,
+			'channels' => Channel::getSelectorArray()
 		]);
     }
 
@@ -45,6 +47,7 @@ class SlidesController extends Controller
 		$slide->published = isset($request->published);
 		$slide->background_color = $request->background_color;
 		$slide->background_image = $request->background_image;
+		$slide->channels()->sync($request->channels ?: []);
 		$slide->save();
 
 		return redirect()->route('backend.slides')

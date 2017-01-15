@@ -49,4 +49,11 @@ class Channel extends Model
         return $this->getSlugKeyName();
     }
 
+	public static function getSelectorArray() {
+		return self::orderBy('name', 'asc')->get()
+				->keyBy('id')
+				->map(function($element){
+					return $element->name;
+				});
+	}
 }

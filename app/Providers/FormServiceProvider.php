@@ -22,7 +22,10 @@ class FormServiceProvider extends ServiceProvider
 		Form::component('bsRadioInline', 'components.form.radio_inline', ['name', 'value', 'label', 'checked']);
 		Form::component('submitCancelButtons', 'components.form.submit_cancel_buttons', ['submit_label', 'cancel_target']);
 		Form::component('submitCancelDeleteButtons', 'components.form.submit_cancel_delete_buttons', ['submit_label', 'cancel_target', 'delete_target']);
+		Form::component('bsSelect', 'components.form.select', ['name', 'items' => [], 'value' => null, 'attributes' => []]);
+		Form::component('bsMultiSelect', 'components.form.multi_select', ['name', 'items' => [], 'value' => null, 'attributes' => []]);
 		Form::component('deleteCancelButtons', 'components.form.delete_cancel_buttons', ['cancel_target']);
+		Form::component('bsMultiCheckbox', 'components.form.multi_checkbox', ['name', 'elements', 'label' => null]);
     }
 
     /**
