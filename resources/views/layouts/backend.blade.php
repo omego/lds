@@ -58,4 +58,6 @@
 	<div class="container">
 		@yield('content')
 	</div>
+    <script src="{{asset('js/backend.js')}}"></script>
+    
 @endsection

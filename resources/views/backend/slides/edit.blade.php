@@ -13,3 +13,9 @@
 		</p>
 	{!! Form::close() !!}
 @endsection
+
+@section('script')
+	$(document).ready(function(){
+		tinymce.init({ selector:'textarea' });
+	});
+@endsection

@@ -16,6 +16,8 @@ require('laravel-elixir-vue-2');
 elixir(mix => {
     mix.sass('app.scss')
        .webpack('app.js')
+       .webpack('backend.js')
        .copy('node_modules/slick-carousel/slick/slick.css', 'public/css')
+	   .copy('node_modules/tinymce/skins/lightgray/**', 'public/js/skins/lightgray')
        .copy('node_modules/font-awesome/fonts/**', 'public/fonts');
 });
