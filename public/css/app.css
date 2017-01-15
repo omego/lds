@@ -4655,7 +4655,7 @@ tbody.collapse.in {
 
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
   color: #555555;
-  background-color: #f5f8fa;
+  background-color: #fff;
   border: 1px solid #ddd;
   border-bottom-color: transparent;
   cursor: default;
@@ -10736,6 +10736,10 @@ button.close {
 
 body.backend {
   background: #ffffff;
+}
+
+.tab-content > div {
+  padding: 20px 10px;
 }
 
 .table td.fit,

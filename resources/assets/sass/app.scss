@@ -19,6 +19,10 @@ body.backend {
 	background: #ffffff;
 }
 
+.tab-content > div {
+    padding: 20px 10px;
+}
+
 .table td.fit, 
 .table th.fit {
     white-space: nowrap;
