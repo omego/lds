@@ -13,6 +13,8 @@
 
 Route::get('/', 'FrontendController@index')->name('frontend.index');
 Route::get('/channels/{channel}', 'FrontendController@showChannel')->name('frontend.channel');
+Route::get('/slides/{slide}', 'FrontendController@showSlide')->name('frontend.slide');
+
 
 // Authentication Routes...
 //Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
@@ -41,3 +43,5 @@ Route::post('/backend/channels/edit/{channel}', 'Backend\ChannelsController@upda
 Route::get('/backend/slides', 'Backend\SlidesController@index')->name('backend.slides');
 Route::get('/backend/slides/edit/{slide}', 'Backend\SlidesController@edit')->name('backend.slides.edit');
 Route::post('/backend/slides/edit/{slide}', 'Backend\SlidesController@update')->name('backend.slides.update');
+Route::get('/backend/slides/publish/{slide}', 'Backend\SlidesController@publish')->name('backend.slides.publish');
+Route::get('/backend/slides/unpublish/{slide}', 'Backend\SlidesController@unpublish')->name('backend.slides.unpublish');

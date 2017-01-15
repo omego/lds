@@ -5,6 +5,9 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
+use App\Channel;
+use App\Slide;
+
 class DashboardController extends Controller
 {
     /**
@@ -24,6 +27,9 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        return view('backend.dashboard');
+        return view('backend.dashboard', [
+			'channels' => Channel::get(),
+			'slides' => Slide::orderBy('updated_at')->take(5)->get()
+		]);
     }
 }

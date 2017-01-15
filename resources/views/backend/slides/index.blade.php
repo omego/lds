@@ -4,6 +4,9 @@
 
 @section('content')
 	<h2>@lang('ds.slides')</h2>
+
+	@include('components.messages.success')
+
 	@if (count($slides) > 0)
 		<table class="table table-condensed table-bordered table-striped">
 			<thead>
@@ -12,6 +15,7 @@
 					<th class="fit">@lang('ds.channels')</th>
 					<th class="fit">@lang('ds.published')</th>
 					<th class="fit">@lang('base.last_changed')</th>
+					<th class="fit">@lang('base.actions')</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -23,12 +27,15 @@
 						})->implode(', ') }}</td>
 						<td class="fit text-center">
 							@if ($slide->published) 
-								<i class="fa fa-check text-success"></i>
+								<a href="{{ route('backend.slides.unpublish', $slide) }}" title="@lang('ds.unpublish')"><i class="fa fa-check text-success"></i></a>
 							@else
-								<i class="fa fa-times text-muted"></i>
+								<a href="{{ route('backend.slides.publish', $slide) }}" title="@lang('ds.publish')"><i class="fa fa-times text-muted"></i></a>
 							@endif
 						</td>
 						<td class="fit" title="{{ $slide->updated_at->format(config('app.date_format')) }}">{{ $slide->updated_at->diffForHumans() }}</td>
+						<td class="fit text-center">
+							<a href="{{ route('frontend.slide', $slide) }}" title="@lang('ds.frontend_view')" target="_blank"><i class="fa fa-eye"></i></a>
+						</td>
 					</tr>
 				@endforeach
 			</tbody>

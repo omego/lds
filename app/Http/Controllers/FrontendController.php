@@ -2,9 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
 use App\Channel;
+use App\Slide;
 
 class FrontendController extends Controller
 {
@@ -30,6 +29,19 @@ class FrontendController extends Controller
     {
         return view('frontend.channel', [
 			'channel' => $channel
+		]);
+    }
+
+    /**
+     * Show a slide.
+     *
+     * @param  Slide  Slide
+     * @return Response
+     */
+    public function showSlide(Slide $slide)
+    {
+        return view('frontend.slide', [
+			'slide' => $slide
 		]);
     }
 }

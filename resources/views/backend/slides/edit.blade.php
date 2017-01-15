@@ -4,6 +4,9 @@
 
 @section('content')
 	<h2>@lang('ds.edit_slide')</h2>
+	
+	@include('components.messages.validation')
+
 	{!! Form::model($slide, ['route' => ['backend.slides.update', $slide]]) !!}
 		<div class="row">
 			<div class="col-md-8">
@@ -11,6 +14,7 @@
 				{{ Form::bsTextarea('content') }}
 			</div>
 			<div class="col-md-4">
+				
 				<div class="panel panel-default">
 					<div class="panel-heading">@lang('ds.display_options')</div>
 					<div class="panel-body">
@@ -44,8 +48,9 @@
 			</div>
 		</div>
 		<p>
-			<button type="submit" class="btn btn-primary">@lang('base.save')</button> 
-			<a href="{{ route('backend.slides') }}" class="btn btn-default">@lang('base.cancel')</a>
+			<button type="submit" class="btn btn-primary"><i class="fa fa-check"></i> @lang('base.save')</button> 
+			<a href="{{ route('frontend.slide', [ $slide ] ) }}" target="_blank" class="btn btn-default"><i class="fa fa-eye"></i> @lang('ds.frontend_view')</a>
+			<a href="{{ route('backend.slides') }}" class="btn btn-default"><i class="fa fa-times"></i> @lang('base.cancel')</a>
 		</p>
 	{!! Form::close() !!}
 @endsection

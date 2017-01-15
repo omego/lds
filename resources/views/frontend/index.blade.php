@@ -31,7 +31,7 @@
 						@endif	
 					@else
 						<p class="text-success">Hello {{ Auth::user()->name }}! You are already logged in.</p>
-						<a href="{{ route('backend.dashboard') }}" class="btn btn-primary">Go to Backend</a>
+						<a href="{{ route('backend.dashboard') }}" class="btn btn-primary"><i class="fa fa-cogs"></i> Go to Backend</a>
 					@endif
 				</div>
 			</div>

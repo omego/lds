@@ -50,4 +50,22 @@ class SlidesController extends Controller
 		return redirect()->route('backend.slides')
 				->with('success', trans('ds.slide_updated'));
     }
+
+    public function publish(Slide $slide)
+    {
+		$slide->published = true;
+		$slide->save();
+
+		return redirect()->route('backend.slides')
+				->with('success', trans('ds.slide_published'));
+    }
+
+    public function unpublish(Slide $slide)
+    {
+		$slide->published = false;
+		$slide->save();
+
+		return redirect()->route('backend.slides')
+				->with('success', trans('ds.slide_unpublished'));
+    }
 }
