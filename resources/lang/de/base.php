@@ -13,4 +13,6 @@ return [
     'last_changed'     => 'Zuletzt geändert',
 	'actions'          => 'Aktionen',
 
+	'invalid_input'    => 'Ungültige Eingabe!',
+	
 ];

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Http\Requests\StoreSettings;
 
 class SettingsController extends Controller
 {
@@ -26,8 +27,8 @@ class SettingsController extends Controller
     {
         return view('backend.settings');
     }
-	
-    public function update(Request $request)
+
+    public function update(StoreSettings $request)
     {
 		\Setting::set('slider_display_duration', $request->slider_display_duration);
 		\Setting::set('slider_transition_duration', $request->slider_transition_duration);

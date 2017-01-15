@@ -4,7 +4,7 @@
 
 @section('content')
 	@if (count($channel->publishedSlides()) > 0)
-		<div class="slider" data-slick='{"autoplaySpeed":3000,"speed":500}'>
+		<div class="slider" data-slick='{"autoplaySpeed":{{ Setting::get('slider_display_duration', 3000) }},"speed":{{ Setting::get('slider_transition_duration', 3000) }}}'>
 			@foreach ($channel->publishedSlides()->sortByDesc('updated_at') as $slide)
 				@include('frontend.single_slide')
 			@endforeach

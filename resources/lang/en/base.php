@@ -12,4 +12,6 @@ return [
     'name'             => 'Name',
     'last_changed'     => 'Last changed',
 	'actions'          => 'Actions',
+
+	'invalid_input'    => 'Invalid input!',
 ];
