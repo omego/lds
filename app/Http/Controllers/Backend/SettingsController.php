@@ -29,9 +29,10 @@ class SettingsController extends Controller
 	
     public function update(Request $request)
     {
-		//$request->slide_display_duration
-		//$request->slide_transition_duration
-		
+		\Setting::set('slider_display_duration', $request->slider_display_duration);
+		\Setting::set('slider_transition_duration', $request->slider_transition_duration);
+		\Setting::save();
+
 		return redirect()->route('backend.settings')
 				->with('success', trans('ds.settings_updated'));
     }

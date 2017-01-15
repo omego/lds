@@ -29,4 +29,7 @@ return [
 
 	'settings'           => 'Settings',
 	'settings_updated'   => 'Settings has been updated!',
+	'slider_display_duration'    => 'Slide display duration (ms)',
+	'slider_transition_duration' => 'Slide transition duration (ms)',
+
 ];

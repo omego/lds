@@ -19,8 +19,8 @@
 			<!-- Tab panes -->
 			<div class="tab-content">
 				<div role="tabpanel" class="tab-pane active" id="slider">
-					{{ Form::bsNumber('slide_display_duration', '3000') }}
-					{{ Form::bsNumber('slide_transition_duration', '500') }}
+					{{ Form::bsNumber('slider_display_duration', Setting::get('slider_display_duration', 3000), trans('ds.slider_display_duration'), [ 'min' => 0 ]) }}
+					{{ Form::bsNumber('slider_transition_duration', Setting::get('slider_transition_duration', 500), trans('ds.slider_transition_duration'), [ 'min' => 0 ]) }}
 				</div>
 				<div role="tabpanel" class="tab-pane" id="layout">
 					TODO

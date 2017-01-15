@@ -187,6 +187,8 @@ return [
 		Collective\Html\HtmlServiceProvider::class,
 		
 		App\Providers\FormServiceProvider::class,
+		
+		anlutro\LaravelSettings\ServiceProvider::class,
     ],
 
     /*
@@ -238,6 +240,7 @@ return [
 		'Ekko' => Laravelista\Ekko\Facades\Ekko::class,
 		'Form' => Collective\Html\FormFacade::class,
 		'Html' => Collective\Html\HtmlFacade::class,
+		'Setting' => anlutro\LaravelSettings\Facade::class,
     ],
 
 ];
