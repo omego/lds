@@ -20,6 +20,10 @@ class Channel extends Model
         return $this->belongsToMany('App\Slide')
 			->withTimestamps();
     }
+	
+	public function publishedSlides() {
+		return $this->slides()->where('published', 1)->get();		
+	}
 
     /**
      * Return the sluggable configuration array for this model.

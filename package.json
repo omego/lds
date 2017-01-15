@@ -6,6 +6,7 @@
   },
   "devDependencies": {
     "bootstrap-sass": "^3.3.7",
+    "bootstrap-toggle": "2.2.2",
     "font-awesome": "^4.7.0",
     "gulp": "^3.9.1",
     "jquery": "^3.1.0",

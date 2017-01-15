@@ -42,6 +42,7 @@ class SlidesController extends Controller
     {
 		$slide->name    = $request->name;
 		$slide->content = $request->content;
+		$slide->published = isset($request->published);
 		$slide->save();
 
 		return redirect()->route('backend.slides')

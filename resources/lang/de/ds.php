@@ -2,6 +2,9 @@
 
 return [
 
+	'published'          => 'Veröffentlicht',
+	'display_options'    => 'Anzeigeeinstellungen',
+
     'channel'            => 'Kanal',
     'channels'           => 'Kanäle',
 	'edit_channel'       => 'Kanal bearbeiten',

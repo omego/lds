@@ -1,6 +1,6 @@
 @extends('layouts.backend')
 
-@section('title', trans('ds.slies'))
+@section('title', trans('ds.slides'))
 
 @section('content')
 	<h2>@lang('ds.slides')</h2>
@@ -10,6 +10,7 @@
 				<tr>
 					<th>@lang('base.name')</th>
 					<th class="fit">@lang('ds.channels')</th>
+					<th class="fit">@lang('ds.published')</th>
 					<th class="fit">@lang('base.last_changed')</th>
 				</tr>
 			</thead>
@@ -20,6 +21,13 @@
 						<td class="fit">{{ $slide->channels->map(function ($item, $key) {
 							return $item->name;
 						})->implode(', ') }}</td>
+						<td class="fit text-center">
+							@if ($slide->published) 
+								<i class="fa fa-check text-success"></i>
+							@else
+								<i class="fa fa-times text-muted"></i>
+							@endif
+						</td>
 						<td class="fit" title="{{ $slide->updated_at->format(config('app.date_format')) }}">{{ $slide->updated_at->diffForHumans() }}</td>
 					</tr>
 				@endforeach

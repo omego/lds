@@ -5,8 +5,37 @@
 @section('content')
 	<h2>@lang('ds.edit_slide')</h2>
 	{!! Form::model($slide, ['route' => ['backend.slides.update', $slide]]) !!}
-		{{ Form::bsText('name') }}
-		{{ Form::bsTextarea('content') }}
+		<div class="row">
+			<div class="col-md-8">
+				{{ Form::bsText('name') }}
+				{{ Form::bsTextarea('content') }}
+			</div>
+			<div class="col-md-4">
+				<div class="panel panel-default">
+					<div class="panel-heading">@lang('ds.display_options')</div>
+					<div class="panel-body">
+						<div class="checkbox">
+							{{ Form::checkbox('published', '1', null, ['data-toggle' => 'toggle', 'data-size' => 'small' ]) }}
+							<label>@lang('ds.published')</label>						  
+						</div>
+						<!--
+						<div class="checkbox">
+							<input type="checkbox" data-toggle="toggle" data-size="small"> &nbsp;
+							<label>Only show on certain days</label>
+						</div>
+						<div class="checkbox">
+							<input type="checkbox" data-toggle="toggle" data-size="small"> &nbsp;
+							<label>Do not show before specified date</label>
+						</div>
+						<div class="checkbox">
+							<input type="checkbox" data-toggle="toggle" data-size="small"> &nbsp;
+							<label>Hide after specified date</label>
+						</div>
+						-->
+					</div>
+				</div>
+			</div>
+		</div>
 		<p>
 			<button type="submit" class="btn btn-primary">@lang('base.save')</button> 
 			<a href="{{ route('backend.slides') }}" class="btn btn-default">@lang('base.cancel')</a>

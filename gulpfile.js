@@ -18,6 +18,7 @@ elixir(mix => {
        .webpack('app.js')
        .webpack('backend.js')
        .copy('node_modules/slick-carousel/slick/slick.css', 'public/css')
+       .copy('node_modules/bootstrap-toggle/css/bootstrap2-toggle.min.css', 'public/css')
 	   .copy('node_modules/tinymce/skins/lightgray/**', 'public/js/skins/lightgray')
        .copy('node_modules/font-awesome/fonts/**', 'public/fonts');
 });

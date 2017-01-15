@@ -2,6 +2,9 @@
 
 return [
 
+	'published'          => 'Published',
+	'display_options'    => 'Display Options',
+	
     'channel'            => 'Channel',
     'channels'           => 'Channels',
     'edit_channel'       => 'Edit channel',
