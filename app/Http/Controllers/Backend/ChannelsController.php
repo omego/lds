@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
+use App\Http\Requests\StoreChannel;
 
 use App\Channel;
 
@@ -38,7 +38,7 @@ class ChannelsController extends Controller
 		]);
     }
 
-    public function update(Request $request, Channel $channel)
+    public function update(StoreChannel $request, Channel $channel)
     {
 		$channel->name = $request->name;
 		$channel->save();

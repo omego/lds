@@ -10,8 +10,8 @@
 	{!! Form::model($slide, ['route' => ['backend.slides.update', $slide]]) !!}
 		<div class="row">
 			<div class="col-md-8">
-				{{ Form::bsText('name') }}
-				{{ Form::bsTextarea('content') }}
+				{{ Form::bsText('name', null, trans('base.name')) }}
+				{{ Form::bsTextarea('content', null, trans('base.content')) }}
 			</div>
 			<div class="col-md-4">
 				
@@ -41,8 +41,8 @@
 				<div class="panel panel-default">
 					<div class="panel-heading">@lang('ds.style_options')</div>
 					<div class="panel-body">
-						{{ Form::bsText('background_color') }}
-						{{ Form::bsText('background_image') }}
+						{{ Form::bsText('background_color', null, trans('base.background_color')) }}
+						{{ Form::bsText('background_image', null, trans('base.background_image')) }}
 					</div>
 				</div>
 			</div>

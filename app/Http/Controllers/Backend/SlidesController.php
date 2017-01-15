@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
+use App\Http\Requests\StoreSlide;
 
 use App\Slide;
 
@@ -38,7 +38,7 @@ class SlidesController extends Controller
 		]);
     }
 
-    public function update(Request $request, Slide $slide)
+    public function update(StoreSlide $request, Slide $slide)
     {
 		$slide->name    = $request->name;
 		$slide->content = $request->content;
@@ -48,7 +48,7 @@ class SlidesController extends Controller
 		$slide->save();
 
 		return redirect()->route('backend.slides')
-				->with('success', trans('ds.slide_updated'));
+				->with('success', trans('ds.slide_updated') . ' <a href="' . route('frontend.slide', $slide) . '" target="_blank">' . trans('base.show') .'</a>');
     }
 
     public function publish(Slide $slide)
