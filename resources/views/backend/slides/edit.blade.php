@@ -16,6 +16,13 @@
 
 @section('script')
 	$(document).ready(function(){
-		tinymce.init({ selector:'textarea' });
+		tinymce.init({ selector:'textarea',
+			menubar: false,
+			height: 400,
+			plugins: [
+			  'link image lists media emoticons textcolor'
+			],
+			toolbar: 'undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image | media fullpage | forecolor backcolor'
+		});
 	});
 @endsection

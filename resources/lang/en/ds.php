@@ -7,6 +7,7 @@ return [
     'edit_channel'       => 'Edit channel',
     'channel_updated'    => 'Channel has been updated!',
 	'no_channels_added'  => 'No Channels have been defined yet.',
+	'frontend_view'      => 'Frontend-View',
 
     'slide'              => 'Slide',
     'slides'             => 'Slides',

@@ -7,6 +7,7 @@ return [
 	'edit_channel'       => 'Kanal bearbeiten',
 	'channel_updated'    => 'Kanal wurde aktualisiert!',
 	'no_channels_added'  => 'Es wurden noch keine Kanäle definiert.',
+	'frontend_view'      => 'Frontend-Ansicht',
 
     'slide'              => 'Folie',
     'slides'             => 'Folien',
