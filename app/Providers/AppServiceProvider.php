@@ -14,7 +14,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        Carbon::setToStringFormat('l, j. F Y H:i:s');
+        //
     }
 
     /**

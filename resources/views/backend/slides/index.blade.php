@@ -16,7 +16,7 @@
 				@foreach ($slides->sortByDesc('updated_at') as $slide)
 					<tr>
 						<td>{{ $slide->name }}</td>
-						<td class="fit" title="{{ $slide->updated_at }}">{{ $slide->updated_at->diffForHumans() }}</td>
+						<td class="fit" title="{{ $slide->updated_at->format(config('app.date_format')) }}">{{ $slide->updated_at->diffForHumans() }}</td>
 					</tr>
 				@endforeach
 			</tbody>

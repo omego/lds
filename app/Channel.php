@@ -2,6 +2,7 @@
 
 namespace App;
 
+//use Illuminate\Database\Eloquent\Model;
 use Qwildz\LocalizedEloquentDate\LocalizedEloquent as Model;
 use Cviebrock\EloquentSluggable\Sluggable;
 use Cviebrock\EloquentSluggable\SluggableScopeHelpers;
@@ -43,4 +44,5 @@ class Channel extends Model
     {
         return $this->getSlugKeyName();
     }
+
 }

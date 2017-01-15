@@ -30,4 +30,20 @@ class ChannelsController extends Controller
 			'channels' => Channel::get()
 		]);
     }
+
+    public function edit(Channel $channel)
+    {
+        return view('backend.channels.edit', [
+			'channel' => $channel
+		]);
+    }
+
+    public function update(Request $request, Channel $channel)
+    {
+		$channel->name = $request->name;
+		$channel->save();
+
+		return redirect()->route('backend.channels')
+				->with('success', 'Household has been updated!');
+    }
 }

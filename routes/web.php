@@ -30,5 +30,9 @@ Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm
 Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 
 Route::get('/backend', 'Backend\DashboardController@index')->name('backend.dashboard');
+
 Route::get('/backend/channels', 'Backend\ChannelsController@index')->name('backend.channels');
+Route::get('/backend/channels/edit/{channel}', 'Backend\ChannelsController@edit')->name('backend.channels.edit');
+Route::post('/backend/channels/edit/{channel}', 'Backend\ChannelsController@update')->name('backend.channels.update');
+
 Route::get('/backend/slides', 'Backend\SlidesController@index')->name('backend.slides');

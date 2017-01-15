@@ -92,6 +92,8 @@ return [
 
     'fallback_locale' => 'en',
 
+	'date_format' => 'l, j. F Y H:i:s',
+	
     /*
     |--------------------------------------------------------------------------
     | Encryption Key
@@ -182,6 +184,9 @@ return [
 		
 		Jenssegers\Date\DateServiceProvider::class,
 		Laravelista\Ekko\EkkoServiceProvider::class,
+		Collective\Html\HtmlServiceProvider::class,
+		
+		App\Providers\FormServiceProvider::class,
     ],
 
     /*
@@ -231,6 +236,8 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 		'Date' => Jenssegers\Date\Date::class,
 		'Ekko' => Laravelista\Ekko\Facades\Ekko::class,
+		'Form' => Collective\Html\FormFacade::class,
+		'Html' => Collective\Html\HtmlFacade::class,
     ],
 
 ];

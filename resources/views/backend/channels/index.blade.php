@@ -15,8 +15,8 @@
 			<tbody>
 				@foreach ($channels->sortBy('name') as $channel)
 					<tr>
-						<td>{{ $channel->name }}</td>
-						<td class="fit" title="{{ $channel->updated_at }}">{{ $channel->updated_at->diffForHumans() }}</td>
+						<td><a href="{{ route('backend.channels.edit', $channel) }}">{{ $channel->name }}</a></td>
+						<td class="fit" title="{{ $channel->updated_at->format(config('app.date_format')) }}">{{ $channel->updated_at->diffForHumans() }}</td>
 					</tr>
 				@endforeach
 			</tbody>
