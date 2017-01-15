@@ -26,6 +26,7 @@ return [
 	'slide_published'    => 'Slide has been published.',
 	'slide_unpublished'  => 'Slide has been unpublished.',
 	'recently_updated_slides'  => 'Recently updated slides',
+	'only_show_on_selected_days' => 'Only show on selected days',
 
 	'settings'           => 'Settings',
 	'settings_updated'   => 'Settings has been updated!',

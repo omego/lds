@@ -19,14 +19,18 @@
 					<div class="panel-heading">@lang('ds.display_options')</div>
 					<div class="panel-body">
 						<div class="checkbox">
-							{{ Form::checkbox('published', '1', null, ['data-toggle' => 'toggle', 'data-size' => 'small' ]) }}
-							<label>@lang('ds.published')</label>						  
+							{{ Form::checkbox('published', '1', null, [ 'id' => 'published', 'data-toggle' => 'toggle', 'data-size' => 'small' ]) }}
+							<label for="published">@lang('ds.published')</label>						  
 						</div>
-						<!--
 						<div class="checkbox">
-							<input type="checkbox" data-toggle="toggle" data-size="small"> &nbsp;
-							<label>Only show on certain days</label>
+							<input type="checkbox" data-toggle="toggle" data-size="small" name="weekday_selector_toggle" id="weekday-selector-toggle" value="1"> 
+							<label>@lang('ds.only_show_on_selected_days')</label>
 						</div>
+						<div class="weekday-selector">
+							{{ Form::bsMultiCheckbox('show_on_selected_days[]', DateHelper::getLocalizedDays()) }}
+						</div>
+						
+						<!--
 						<div class="checkbox">
 							<input type="checkbox" data-toggle="toggle" data-size="small"> &nbsp;
 							<label>Do not show before specified date</label>
@@ -70,6 +74,18 @@
 
 @section('script')
 	$(document).ready(function(){
+		if ($('.weekday-selector').find('input[type="checkbox"]:checked').length == 0) {
+			$('.weekday-selector').hide();
+		} else {
+			$('#weekday-selector-toggle').prop('checked', true).change();
+		}
+	    $('#weekday-selector-toggle').change(function() {
+			if ($(this).prop('checked')) {
+				$('.weekday-selector').fadeIn();
+			} else {
+				$('.weekday-selector').fadeOut();
+			}
+		});
 		$('.colorpicker-component').colorpicker({
 			 colorSelectors: { 'black': '#000000', 'white': '#ffffff', 'red': '#FF0000', 'default': '#777777', 'primary': '#337ab7', 'success': '#5cb85c', 'info': '#5bc0de', 'warning': '#f0ad4e', 'danger': '#d9534f' }
 		});

@@ -26,6 +26,7 @@ return [
 	'slide_published'    => 'Die Folie wurde veröffentlicht.',
 	'slide_unpublished'  => 'Die Veröffentlichung der Folie wurde rückgängig gemacht.',
 	'recently_updated_slides'  => 'Vor kurzem aktualisierte Folien',
+	'only_show_on_selected_days' => 'Nur an gewissen Tagen anzeigen',
 	
 	'settings'           => 'Einstellungen',
 	'settings_updated'   => 'Die Einstellungen wurden aktualisiert!',

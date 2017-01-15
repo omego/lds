@@ -186,6 +186,8 @@ return [
 		Laravelista\Ekko\EkkoServiceProvider::class,
 		Collective\Html\HtmlServiceProvider::class,
 		
+		App\Providers\HelperServiceProvider::class,
+		
 		App\Providers\FormServiceProvider::class,
 		
 		anlutro\LaravelSettings\ServiceProvider::class,

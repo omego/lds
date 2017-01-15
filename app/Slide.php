@@ -14,4 +14,15 @@ class Slide extends Model
         return $this->belongsToMany('App\Channel')
 			->withTimestamps();
     }
+	
+    public function getShowOnSelectedDaysAttribute($value)
+    {
+        return !empty($value) ? json_decode($value) : array();
+    }
+
+	public function setShowOnSelectedDaysAttribute($value)
+    {
+		$this->attributes['show_on_selected_days'] = !empty($value) ? json_encode(is_array($value) ? $value : array($value)) : null;
+    }
+
 }
