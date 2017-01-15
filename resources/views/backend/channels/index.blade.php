@@ -9,12 +9,14 @@
 			<thead>
 				<tr>
 					<th>Name</th>
+					<th>Changed</th>
 				</tr>
 			</thead>
 			<tbody>
 				@foreach ($channels->sortBy('name') as $channel)
 					<tr>
 						<td>{{ $channel->name }}</td>
+						<td>{{ $channel->updated_at }}</td>
 					</tr>
 				@endforeach
 			</tbody>

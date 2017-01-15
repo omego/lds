@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "892d31e8160047d9304f3ab68f06bacd",
-    "content-hash": "3b9c85f1f87218ee62a9e3e4e188a4ac",
+    "hash": "da734de7768a1065ffa07a583791734a",
+    "content-hash": "a149c525f9a058fd17bdc7b0971fe8fc",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -362,6 +362,63 @@
                 }
             ],
             "time": "2015-04-20 18:58:01"
+        },
+        {
+            "name": "jenssegers/date",
+            "version": "v3.2.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jenssegers/date.git",
+                "reference": "ad55257ae655af540e055c0fcd48bc3ec1962ec4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jenssegers/date/zipball/ad55257ae655af540e055c0fcd48bc3ec1962ec4",
+                "reference": "ad55257ae655af540e055c0fcd48bc3ec1962ec4",
+                "shasum": ""
+            },
+            "require": {
+                "nesbot/carbon": "^1.0",
+                "php": ">=5.4",
+                "symfony/translation": "^2.7|^3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.0|^5.0",
+                "satooshi/php-coveralls": "^1.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Jenssegers\\Date\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jens Segers",
+                    "homepage": "https://jenssegers.com"
+                }
+            ],
+            "description": "A date library to help you work with dates in different languages",
+            "homepage": "https://github.com/jenssegers/date",
+            "keywords": [
+                "carbon",
+                "date",
+                "datetime",
+                "i18n",
+                "laravel",
+                "time",
+                "translation"
+            ],
+            "time": "2017-01-02 09:21:15"
         },
         {
             "name": "jeremeamia/SuperClosure",
@@ -1019,6 +1076,53 @@
                 "shell"
             ],
             "time": "2016-12-07 17:15:07"
+        },
+        {
+            "name": "qwildz/localized-eloquent-date",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/qwildz/localized-eloquent-date.git",
+                "reference": "d2a6aba8beb254ba6e1bc16628e73be84ee5c2d4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/qwildz/localized-eloquent-date/zipball/d2a6aba8beb254ba6e1bc16628e73be84ee5c2d4",
+                "reference": "d2a6aba8beb254ba6e1bc16628e73be84ee5c2d4",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "4.2.*|~5",
+                "jenssegers/date": "*",
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Qwildz\\LocalizedEloquentDate\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Muhammad Resna Rizki Pratama",
+                    "email": "resnarizki29@gmail.com"
+                }
+            ],
+            "description": "Multi-language support for Laravel Eloquent's dates",
+            "homepage": "https://github.com/qwildz/localized-eloquent-date",
+            "keywords": [
+                "ardent",
+                "carbon",
+                "date",
+                "eloquent",
+                "laravel",
+                "localization"
+            ],
+            "time": "2015-02-18 03:44:49"
         },
         {
             "name": "ramsey/uuid",
@@ -3566,7 +3670,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "qwildz/localized-eloquent-date": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

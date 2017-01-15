@@ -64,7 +64,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => 'Europe/Zurich',
 
     /*
     |--------------------------------------------------------------------------
@@ -77,7 +77,7 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'de',
 
     /*
     |--------------------------------------------------------------------------
@@ -179,6 +179,8 @@ return [
         App\Providers\RouteServiceProvider::class,
 
 		Cviebrock\EloquentSluggable\ServiceProvider::class,
+		
+		Jenssegers\Date\DateServiceProvider::class,
     ],
 
     /*
@@ -226,7 +228,7 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-
+		'Date' => Jenssegers\Date\Date::class,
     ],
 
 ];
