@@ -14,6 +14,10 @@
 // slick carousel
 @import "slick.css";
 
+body.backend {
+	background: #ffffff;
+}
+
 .slider {
 	position: relative;
 	height: 100vh;

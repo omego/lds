@@ -1,7 +1,9 @@
 @extends('layouts.base')
 
+@section('body_class', 'backend')
+
 @section('layout_content')
-	<nav class="navbar navbar-default navbar-static-top">
+	<nav class="navbar navbar-inverse navbar-static-top">
 		<div class="container">
 			<div class="navbar-header">
 
@@ -22,7 +24,8 @@
 			<div class="collapse navbar-collapse" id="app-navbar-collapse">
 				<!-- Left Side Of Navbar -->
 				<ul class="nav navbar-nav">
-					&nbsp;
+					<li class=""><a href="{{ route('backend.channels') }}">Channels</a></li>
+					<li class=""><a href="{{ route('backend.slides') }}">Slides</a></li>
 				</ul>
 
 				<!-- Right Side Of Navbar -->

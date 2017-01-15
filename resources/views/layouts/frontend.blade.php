@@ -1,5 +1,7 @@
 @extends('layouts.base')
 
+@section('body_class', 'frontend')
+
 @section('layout_content')
 	<nav class="navbar navbar-default navbar-static-top">
 		<div class="container">

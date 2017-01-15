@@ -10733,6 +10733,10 @@ button.close {
   clip: auto;
 }
 
+body.backend {
+  background: #ffffff;
+}
+
 .slider {
   position: relative;
   height: 100vh;

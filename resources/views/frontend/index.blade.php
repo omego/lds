@@ -23,9 +23,14 @@
 				<div class="panel-heading">Login</div>
 				<div class="panel-body">
 					@if (Auth::guest())
-						@include('auth.login_form')
+						@if (@App\User::count() > 0)
+							@include('auth.login_form')
+						@else
+							<p>Please create a new administrator user:</p>
+							@include('auth.register_form')
+						@endif	
 					@else
-						<p class="text-success">You are already logged in.</p>
+						<p class="text-success">Hello {{ Auth::user()->name }}! You are already logged in.</p>
 						<a href="{{ route('backend.dashboard') }}" class="btn btn-primary">Go to Backend</a>
 					@endif
 				</div>

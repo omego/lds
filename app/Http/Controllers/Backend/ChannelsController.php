@@ -1,10 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Backend;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class BackendController extends Controller
+use App\Channel;
+
+class ChannelsController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -17,12 +20,14 @@ class BackendController extends Controller
     }
 
     /**
-     * Show the application dashboard.
+     * Show the channels index.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        return view('backend.dashboard');
+        return view('backend.channels.index', [
+			'channels' => Channel::get()
+		]);
     }
 }

@@ -19,7 +19,7 @@
 			]); ?>
 		</script>
     </head>
-    <body>
+    <body class="@yield('body_class', '')">
         @yield('layout_content')
         <script src="{{asset('js/app.js')}}"></script>
         <script>
