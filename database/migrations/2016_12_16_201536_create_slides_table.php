@@ -18,8 +18,8 @@ class CreateSlidesTable extends Migration
 			$table->string('name');
 			$table->boolean('published')->default(false);
 			$table->text('content');
-			$table->string('background-image')->nullable();
-			$table->string('background-color')->nullable();
+			$table->string('background_image')->nullable();
+			$table->string('background_color')->nullable();
             $table->timestamps();
         });
     }

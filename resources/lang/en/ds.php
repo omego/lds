@@ -4,6 +4,7 @@ return [
 
 	'published'          => 'Published',
 	'display_options'    => 'Display Options',
+	'style_options'      => 'Styling',
 	
     'channel'            => 'Channel',
     'channels'           => 'Channels',

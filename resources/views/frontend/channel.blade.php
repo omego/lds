@@ -6,7 +6,7 @@
 	@if (count($channel->publishedSlides()) > 0)
 		<div class="slider" data-slick='{"autoplaySpeed":3000,"speed":500}'>
 			@foreach ($channel->publishedSlides()->sortByDesc('updated_at') as $slide)
-				<div class="slide" style="background-color: ">
+				<div class="slide" style="background-color: {{ $slide->background_color }}">
 					{!! $slide->content !!}
 				</div>
 			@endforeach

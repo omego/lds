@@ -4,6 +4,7 @@ return [
 
 	'published'          => 'Veröffentlicht',
 	'display_options'    => 'Anzeigeeinstellungen',
+	'style_options'      => 'Stil',
 
     'channel'            => 'Kanal',
     'channels'           => 'Kanäle',

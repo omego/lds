@@ -43,6 +43,8 @@ class SlidesController extends Controller
 		$slide->name    = $request->name;
 		$slide->content = $request->content;
 		$slide->published = isset($request->published);
+		$slide->background_color = $request->background_color;
+		$slide->background_image = $request->background_image;
 		$slide->save();
 
 		return redirect()->route('backend.slides')

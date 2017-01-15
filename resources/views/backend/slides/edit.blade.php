@@ -34,6 +34,13 @@
 						-->
 					</div>
 				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading">@lang('ds.style_options')</div>
+					<div class="panel-body">
+						{{ Form::bsText('background_color') }}
+						{{ Form::bsText('background_image') }}
+					</div>
+				</div>
 			</div>
 		</div>
 		<p>
