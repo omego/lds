@@ -26,11 +26,11 @@
 						@if (@App\User::count() > 0)
 							@include('auth.login_form')
 						@else
-							<p>Please create a new administrator user:</p>
+							<p>@lang('base.please_create_new_admin_user')</p>
 							@include('auth.register_form')
 						@endif	
 					@else
-						<p class="text-success">Hello {{ Auth::user()->name }}! You are already logged in.</p>
+						<p class="text-success">@lang('base.hello_admin_you_are_logged_in', [ 'name' => Auth::user()->name ])</p>
 						<a href="{{ route('backend.dashboard') }}" class="btn btn-primary"><i class="fa fa-cogs"></i> Go to Backend</a>
 					@endif
 				</div>

@@ -19,4 +19,7 @@ return [
 
 	'invalid_input'    => 'Ungültige Eingabe!',
 	
+	'hello_admin_you_are_logged_in' => 'Hallo :Name, du bist bereits eingeloggt.',
+	'please_create_new_admin_user' => 'Bitte erstelle einen neuen Administrator-Benutzer:',
+
 ];
