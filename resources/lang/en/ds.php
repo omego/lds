@@ -20,6 +20,7 @@ return [
 	'no_channels_added'  => 'No Channels have been defined yet.',
 	'frontend_view'      => 'Frontend view',
 	'channel_url'        => 'Channel URL',
+	'really_delete_this_channel' => 'Do you really want to delete this channel?',
 
     'slide'              => 'Slide',
     'slides'             => 'Slides',

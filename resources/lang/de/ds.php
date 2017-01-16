@@ -20,6 +20,7 @@ return [
 	'no_channels_added'  => 'Es wurden noch keine Kanäle definiert.',
 	'frontend_view'      => 'Frontend-Ansicht',
 	'channel_url'        => 'Kanal-URL',
+	'really_delete_this_channel' => 'Möchten Sie diesen Kanal wirklich löschen?',
 
     'slide'              => 'Folie',
     'slides'             => 'Folien',

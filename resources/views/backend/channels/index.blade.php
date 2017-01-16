@@ -31,7 +31,7 @@
 							<a href="{{ route('backend.channels.edit', $channel) }}" title="@lang('base.edit')"><i class="fa fa-pencil"></i></a> &nbsp;
 							<a href="{{ route('frontend.channel', $channel) }}" title="@lang('ds.frontend_view')" target="_blank"><i class="fa fa-eye"></i></a>
 							{!! Form::open([ 'method' => 'delete', 'route' => ['backend.channels.destroy', $channel] ]) !!}
-								<button type="submit" class="btn btn-xs btn-link" title="@lang('base.delete')"><i class="fa fa-trash"></i></button> 
+								<button type="submit" class="btn btn-xs btn-link delete-submit" title="@lang('base.delete')"><i class="fa fa-trash"></i></button> 
 							{!! Form::close() !!}
 						</td>
 					</tr>
@@ -41,4 +41,14 @@
 	@else
 		<div class="alert alert-info" role="alert">@lang('ds.no_channels_added')</div>
 	@endif
+@endsection
+
+@section('script')
+	$(function(){
+		$('.delete-submit').click(function(e){
+			if (!confirm('@lang('ds.really_delete_this_channel')')) {
+				e.preventDefault();
+			}
+		});
+	});
 @endsection
