@@ -1,5 +1,7 @@
 @extends('layouts.frontend')
 
+@section('title', trans('auth.reset_password'))
+
 @section('content')
 <div class="container">
     <div class="row">
@@ -63,7 +65,7 @@
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">
-                                    @lang('auth.reset_password')
+                                    <i class="fa fa-check"></i> @lang('auth.reset_password')
                                 </button>
                             </div>
                         </div>

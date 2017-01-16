@@ -15,6 +15,7 @@ return [
 
     'failed' => 'Diese Zugangsdaten sind nicht korrekt.',
     'throttle' => 'Zu viele Loginversuche. Probiere es nochmals in :seconds Sekunden.',
+	'name' => 'Name',
 	'email_address' => 'E-Mail Adresse',
 	'password' => 'Passwort',
 	'remember_me' => 'Erinnere dich an mich',
