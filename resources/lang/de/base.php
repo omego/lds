@@ -17,6 +17,7 @@ return [
 	'actions'          => 'Aktionen',
 	'background_image' => 'Hintergrundbild',
 	'background_color' => 'Hintergrundfarbe',
+	'foreground_color' => 'Vordergrundfarbe',
 
 	'invalid_input'    => 'Ungültige Eingabe!',
 	

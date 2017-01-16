@@ -14,6 +14,21 @@
 			<p>No slides in this channel!</p>
 		</div>
 	@endif
+    @if (Setting::get('dock_show', false))
+        <div class="dock container-fluid">
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    Clock
+                </div>
+                <div class="col-md-4 text-center">
+
+                </div>
+                <div class="col-md-4 text-center">
+                    Logo
+                </div>
+            </div>      
+        </div>
+	@endif
 @endsection
 
 @section('script')

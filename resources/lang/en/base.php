@@ -17,6 +17,7 @@ return [
 	'actions'          => 'Actions',
 	'background_image' => 'Background image',
 	'background_color' => 'Background color',
+	'foreground_color' => 'Foreground color',
 
 	'invalid_input'    => 'Invalid input!',
 	

@@ -11053,4 +11053,12 @@ body.backend {
   color: #aaaaaa;
 }
 
+.dock {
+  position: fixed;
+  bottom: 0;
+  height: 20vh;
+  width: 100vw;
+  background: rgba(150, 150, 150, 0.5);
+}
+
 /*# sourceMappingURL=app.css.map */

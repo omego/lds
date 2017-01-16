@@ -31,6 +31,9 @@ class SettingsController extends Controller
     {
 		\Setting::set('slider_display_duration', $request->slider_display_duration);
 		\Setting::set('slider_transition_duration', $request->slider_transition_duration);
+        \Setting::set('dock_show', isset($request->dock_show));
+        \Setting::set('dock_background_color', $request->dock_background_color);
+        \Setting::set('dock_foreground_color', $request->dock_foreground_color);
 		\Setting::save();
 
 		return redirect()->route('backend.settings')

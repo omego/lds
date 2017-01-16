@@ -26,6 +26,7 @@ class StoreSettings extends FormRequest
         return [
 			'slider_display_duration' => 'required|integer|min:0',
 			'slider_transition_duration' => 'required|integer|min:0',
+            'dock_show' => 'boolean',
         ];
     }
 }
