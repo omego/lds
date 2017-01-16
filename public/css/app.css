@@ -11006,6 +11006,9 @@ body.backend {
   margin-left: 90px;
 }
 
+/*
+* Tables
+*/
 .table td.fit,
 .table th.fit {
   white-space: nowrap;
@@ -11016,6 +11019,9 @@ body.backend {
   display: inline;
 }
 
+/*
+* Slider
+*/
 .slider {
   position: relative;
   height: 100vh;
@@ -11027,6 +11033,7 @@ body.backend {
   height: 100vh;
   width: 100vw;
   padding: 20px 40px;
+  background-size: cover;
 }
 
 .no-slides {

@@ -12,7 +12,7 @@ Create channels with slides for displaying on screens for digital signage.
 
 Install dependencies:
 
-    composer update
+    composer install
 
 Create an empty database on your database server. Then configure the environemnt:
 
