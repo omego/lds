@@ -6,6 +6,7 @@ return [
 	'add'			   => 'Hinzufügen',
 	'edit'			   => 'Bearbeiten',
     'save'             => 'Speichern',
+	'delete'           => 'Löschen',
 	'cancel'           => 'Abbrechen',
 	'show'             => 'Anzeigen',
 	'show_all'         => 'Alle anzeigen',

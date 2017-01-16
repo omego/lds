@@ -1,17 +1,13 @@
 @extends('layouts.backend')
 
-@section('title', trans('ds.edit_channel'))
+@section('title', trans('ds.create_channel'))
 
 @section('content')
-	<h2>@lang('ds.edit_channel')</h2>
+	<h2>@lang('ds.create_channel')</h2>
 
 	@include('components.messages.validation')
-
-	<p>
-		<strong>@lang('ds.channel_url'):</strong> <a href="{{ route('frontend.channel', $channel) }}" title="@lang('ds.frontend_view')" target="_blank">{{ route('frontend.channel', $channel) }}</a>
-	</p>
 	
-	{!! Form::model($channel, [ 'method' => 'put', 'route' => ['backend.channels.update', $channel] ]) !!}
+	{!! Form::model(null, ['route' => ['backend.channels.store']]) !!}
 		{{ Form::bsText('name', null, trans('base.name') ) }}
 		<p>
 			<button type="submit" class="btn btn-primary"><i class="fa fa-check"></i> @lang('base.save')</button> 
@@ -22,6 +18,6 @@
 
 @section('script')
 	$(function(){
-		$('#name').select();
+		$('#name').focus();
 	});
 @endsection

@@ -3,7 +3,11 @@
 @section('title', trans('ds.channels'))
 
 @section('content')
-	<h2>@lang('ds.channels')</h2>
+	<h2>@lang('ds.channels')
+		<span class="pull-right">
+			<a href="{{ route('backend.channels.create') }}" class="btn btn-default"><i class="fa fa-plus-circle"></i> @lang('ds.create_channel')</a>
+		</span>
+	</h2>
 
 	@include('components.messages.success')
 
@@ -24,7 +28,11 @@
 						<td class="fit text-center">{{ $channel->slides->count() }}</td>
 						<td class="fit" title="{{ $channel->updated_at->format(config('app.date_format')) }}">{{ $channel->updated_at->diffForHumans() }}</td>
 						<td class="fit text-center">
+							<a href="{{ route('backend.channels.edit', $channel) }}" title="@lang('base.edit')"><i class="fa fa-pencil"></i></a> &nbsp;
 							<a href="{{ route('frontend.channel', $channel) }}" title="@lang('ds.frontend_view')" target="_blank"><i class="fa fa-eye"></i></a>
+							{!! Form::open([ 'method' => 'delete', 'route' => ['backend.channels.destroy', $channel] ]) !!}
+								<button type="submit" class="btn btn-xs btn-link" title="@lang('base.delete')"><i class="fa fa-trash"></i></button> 
+							{!! Form::close() !!}
 						</td>
 					</tr>
 				@endforeach

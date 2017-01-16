@@ -11,8 +11,12 @@ return [
 
     'channel'            => 'Kanal',
     'channels'           => 'Kanäle',
+	'create_channel'     => 'Kanal erstellen',
 	'edit_channel'       => 'Kanal bearbeiten',
+	'delete_channel'     => 'Kanal löschen',
+	'channel_created'    => 'Kanal wurde erstellt!',
 	'channel_updated'    => 'Kanal wurde aktualisiert!',
+	'channel_deleted'    => 'Kanal wurde gelöscht!',
 	'no_channels_added'  => 'Es wurden noch keine Kanäle definiert.',
 	'frontend_view'      => 'Frontend-Ansicht',
 	'channel_url'        => 'Kanal-URL',

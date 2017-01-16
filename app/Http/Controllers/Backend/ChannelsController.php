@@ -31,6 +31,21 @@ class ChannelsController extends Controller
 		]);
     }
 
+    public function create()
+    {
+        return view('backend.channels.create');
+    }
+
+    public function store(StoreChannel $request)
+    {
+		$channel = new Channel();
+		$channel->name = $request->name;
+		$channel->save();
+
+		return redirect()->route('backend.channels')
+				->with('success', trans('ds.channel_created'));
+    }
+
     public function edit(Channel $channel)
     {
         return view('backend.channels.edit', [
@@ -45,5 +60,13 @@ class ChannelsController extends Controller
 
 		return redirect()->route('backend.channels')
 				->with('success', trans('ds.channel_updated'));
+    }
+
+    public function destroy(Channel $channel)
+    {
+		$channel->delete();
+
+		return redirect()->route('backend.channels')
+				->with('success', trans('ds.channel_deleted'));
     }
 }

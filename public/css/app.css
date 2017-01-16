@@ -11012,6 +11012,10 @@ body.backend {
   width: 1%;
 }
 
+.table td > form {
+  display: inline;
+}
+
 .slider {
   position: relative;
   height: 100vh;

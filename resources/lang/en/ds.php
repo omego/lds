@@ -11,8 +11,12 @@ return [
 	
     'channel'            => 'Channel',
     'channels'           => 'Channels',
+	'create_channel'     => 'Create channel',
     'edit_channel'       => 'Edit channel',
+    'delete_channel'     => 'Delete channel',
+	'channel_created'    => 'Channel has been created!',
     'channel_updated'    => 'Channel has been updated!',
+	'channel_deleted'    => 'Channel has been deleted!',
 	'no_channels_added'  => 'No Channels have been defined yet.',
 	'frontend_view'      => 'Frontend view',
 	'channel_url'        => 'Channel URL',
