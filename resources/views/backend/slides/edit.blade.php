@@ -12,9 +12,32 @@
 			<div class="col-md-8">
 				{{ Form::bsText('name', null, trans('base.name')) }}
 				{{ Form::bsTextarea('content', null, trans('base.content')) }}
+                
+
+				<div class="panel panel-default">
+					<div class="panel-heading">@lang('ds.style_options')</div>
+					<div class="panel-body">
+						<div class="form-group">
+							{{ Form::label('background_color', trans('base.background_color'), ['class' => 'control-label']) }}
+							<div class="input-group colorpicker-component">
+								{{ Form::text('background_color', null, ['class' => 'form-control']) }} <span class="input-group-addon"><i></i></span>
+							</div>
+						</div>
+						{{ Form::bsText('background_image', null, trans('base.background_image')) }}
+					</div>
+				</div>
+                
 			</div>
 			<div class="col-md-4">
-				
+
+                <div class="panel panel-default">
+					<div class="panel-body">
+                        <button type="submit" class="btn btn-primary"><i class="fa fa-check"></i> @lang('base.save')</button> 
+                        <a href="{{ route('frontend.slide', [ $slide ] ) }}" target="_blank" class="btn btn-default"><i class="fa fa-eye"></i> @lang('ds.frontend_view')</a>
+                        <a href="{{ route('backend.slides') }}" class="btn btn-default"><i class="fa fa-times"></i></a>
+					</div>
+				</div>
+		
 				<div class="panel panel-default">
 					<div class="panel-heading">@lang('ds.display_options')</div>
 					<div class="panel-body">
@@ -36,7 +59,7 @@
 							<label>@lang('ds.not_show_before_date')</label>
 						</div>
                         <div class="date-from-selector" id="date-from-selector">
-                            {{ Form::bsText('date_from', null, trans('ds.date_and_time')) }}
+                            {{ Form::bsText('date_from', null, trans('ds.date_and_time'), [ 'class' => 'form-control date-time-picker' ] ) }}
                         </div>
 
 						<div class="checkbox">
@@ -44,7 +67,7 @@
 							<label>@lang('ds.not_show_after_date')</label>
 						</div>
                         <div class="date-to-selector" id="date-to-selector">
-                            {{ Form::bsText('date_to', null, trans('ds.date_and_time')) }}
+                            {{ Form::bsText('date_to', null, trans('ds.date_and_time'), [ 'class' => 'form-control date-time-picker' ] ) }}
                         </div>
                     </div>
 				</div>
@@ -56,25 +79,8 @@
 					</div>
 				</div>
 
-				<div class="panel panel-default">
-					<div class="panel-heading">@lang('ds.style_options')</div>
-					<div class="panel-body">
-						<div class="form-group">
-							{{ Form::label('background_color', trans('base.background_color'), ['class' => 'control-label']) }}
-							<div class="input-group colorpicker-component">
-								{{ Form::text('background_color', null, ['class' => 'form-control']) }} <span class="input-group-addon"><i></i></span>
-							</div>
-						</div>
-						{{ Form::bsText('background_image', null, trans('base.background_image')) }}
-					</div>
-				</div>
 			</div>
 		</div>
-		<p>
-			<button type="submit" class="btn btn-primary"><i class="fa fa-check"></i> @lang('base.save')</button> 
-			<a href="{{ route('frontend.slide', [ $slide ] ) }}" target="_blank" class="btn btn-default"><i class="fa fa-eye"></i> @lang('ds.frontend_view')</a>
-			<a href="{{ route('backend.slides') }}" class="btn btn-default"><i class="fa fa-times"></i> @lang('base.cancel')</a>
-		</p>
 	{!! Form::close() !!}
 @endsection
 
@@ -98,6 +104,10 @@
 		} else {
 			$('#date-to-selector-toggle').prop('checked', true).change();
 		}
+
+        $('.date-time-picker').datetimepicker({
+            format: 'Y-m-d H:i'
+        });
 
         $('input[data-toggle-container]').change(function() {
             var container = $( '#' + $(this).attr('data-toggle-container') );

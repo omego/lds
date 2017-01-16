@@ -3,6 +3,7 @@
 namespace App;
 
 use Qwildz\LocalizedEloquentDate\LocalizedEloquent as Model;
+use Carbon\Carbon;
 
 class Slide extends Model
 {
@@ -25,6 +26,16 @@ class Slide extends Model
 		$this->attributes['show_on_selected_days'] = !empty($value) ? json_encode(is_array($value) ? $value : array($value)) : null;
     }
 
+    public function getDateFromAttribute($value)
+    {
+        return !empty($value) ? (new Carbon($value))->format('Y-m-d H:i') : null;
+    }
+    
+    public function getDateToAttribute($value)
+    {
+        return !empty($value) ? (new Carbon($value))->format('Y-m-d H:i') : null;
+    }
+    
     public function isVisible() {
         return $this->published && 
                 ( $this->date_from == null || $this-> date_from < time() ) &&

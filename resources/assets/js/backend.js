@@ -2,6 +2,7 @@ require('./bootstrap');
 
 require('bootstrap-toggle');
 require('bootstrap-colorpicker');
+require('jquery-datetimepicker');
 
 require('tinymce');
 require('tinymce/themes/modern');
