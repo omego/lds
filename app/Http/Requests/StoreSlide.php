@@ -27,6 +27,8 @@ class StoreSlide extends FormRequest
 			'name' => 'required|max:255',
 			'content' => 'required',
 			'published' => 'boolean',
+			'date_from' => 'date',
+			'date_to' => 'date',            
 			'background_color' => 'max:255',
 			'background_image' => 'max:255',
         ];

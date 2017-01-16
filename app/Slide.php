@@ -25,6 +25,12 @@ class Slide extends Model
 		$this->attributes['show_on_selected_days'] = !empty($value) ? json_encode(is_array($value) ? $value : array($value)) : null;
     }
 
+    public function isVisible() {
+        return $this->published && 
+                ( $this->date_from == null || $this-> date_from < time() ) &&
+                ( $this->date_to == null || $this-> date_to > time() );
+    }
+    
 	public function getStyleArg() {
 		$styles = [];
 		if (!empty($this->background_color)) {

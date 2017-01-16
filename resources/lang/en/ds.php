@@ -8,7 +8,10 @@ return [
 	'style_options'      => 'Styling',
 	'publish'			 => 'Publish',
 	'unpublish'          => 'Unpublish',
-	
+    'date_and_time'     => 'Date and time',
+    'not_show_before_date' => 'Do not show before specified date',
+    'not_show_after_date' => 'Hide after specified date',
+
     'channel'            => 'Channel',
     'channels'           => 'Channels',
 	'create_channel'     => 'Create channel',

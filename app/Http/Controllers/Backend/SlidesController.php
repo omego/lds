@@ -45,6 +45,8 @@ class SlidesController extends Controller
 		$slide->name    = $request->name;
 		$slide->content = $request->content;
 		$slide->published = isset($request->published);
+        $slide->date_from = isset($request->date_from_selector_toggle) && !empty($request->date_from) ? $request->date_from : null;
+        $slide->date_to = isset($request->date_to_selector_toggle) && !empty($request->date_to) ? $request->date_to : null;
 		$slide->show_on_selected_days = isset($request->weekday_selector_toggle) ? $request->show_on_selected_days : array();
 		$slide->background_color = $request->background_color;
 		$slide->background_image = $request->background_image;

@@ -22,7 +22,17 @@ class Channel extends Model
     }
 	
 	public function publishedSlides() {
-		return $this->slides()->where('published', 1)->get();		
+		return $this->slides()
+                ->where('published', 1)
+                ->where(function($query){
+                    $query->where('date_from', null);
+                    $query->orWhere('date_from', '<', time());
+                })
+                ->where(function($query){
+                    $query->where('date_to', null);
+                    $query->orWhere('date_to', '>', time());
+                })
+                ->get();		
 	}
 
     /**

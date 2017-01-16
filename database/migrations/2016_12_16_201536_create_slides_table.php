@@ -21,6 +21,8 @@ class CreateSlidesTable extends Migration
 			$table->string('show_on_selected_days')->nullable();
 			$table->string('background_image')->nullable();
 			$table->string('background_color')->nullable();
+                        $table->timestamp('date_from')->nullable();
+                        $table->timestamp('date_to')->nullable();
             $table->timestamps();
         });
     }

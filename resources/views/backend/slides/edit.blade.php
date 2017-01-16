@@ -22,25 +22,31 @@
 							{{ Form::checkbox('published', '1', null, [ 'id' => 'published', 'data-toggle' => 'toggle', 'data-size' => 'small' ]) }}
 							<label for="published">@lang('ds.published')</label>						  
 						</div>
-						<div class="checkbox">
-							<input type="checkbox" data-toggle="toggle" data-size="small" name="weekday_selector_toggle" id="weekday-selector-toggle" value="1"> 
+
+                        <div class="checkbox">
+							<input type="checkbox" data-toggle="toggle" data-size="small" name="weekday_selector_toggle" id="weekday-selector-toggle" value="1"  data-toggle-container="weekday-selector"> 
 							<label>@lang('ds.only_show_on_selected_days')</label>
 						</div>
-						<div class="weekday-selector">
+						<div class="weekday-selector" id="weekday-selector">
 							{{ Form::bsMultiCheckbox('show_on_selected_days[]', DateHelper::getLocalizedDays()) }}
 						</div>
-						
-						<!--
-						<div class="checkbox">
-							<input type="checkbox" data-toggle="toggle" data-size="small"> &nbsp;
-							<label>Do not show before specified date</label>
+
+                        <div class="checkbox">
+							<input type="checkbox" data-toggle="toggle" data-size="small" name="date_from_selector_toggle" id="date-from-selector-toggle" value="1" data-toggle-container="date-from-selector">
+							<label>@lang('ds.not_show_before_date')</label>
 						</div>
+                        <div class="date-from-selector" id="date-from-selector">
+                            {{ Form::bsText('date_from', null, trans('ds.date_and_time')) }}
+                        </div>
+
 						<div class="checkbox">
-							<input type="checkbox" data-toggle="toggle" data-size="small"> &nbsp;
-							<label>Hide after specified date</label>
+							<input type="checkbox" data-toggle="toggle" data-size="small" name="date_to_selector_toggle" id="date-to-selector-toggle" value="1" data-toggle-container="date-to-selector">
+							<label>@lang('ds.not_show_after_date')</label>
 						</div>
-						-->
-					</div>
+                        <div class="date-to-selector" id="date-to-selector">
+                            {{ Form::bsText('date_to', null, trans('ds.date_and_time')) }}
+                        </div>
+                    </div>
 				</div>
 
 				<div class="panel panel-default">
@@ -74,21 +80,38 @@
 
 @section('script')
 	$(document).ready(function(){
-		if ($('.weekday-selector').find('input[type="checkbox"]:checked').length == 0) {
-			$('.weekday-selector').hide();
+
+		if ($('#weekday-selector').find('input[type="checkbox"]:checked').length == 0) {
+			$('#weekday-selector').hide();
 		} else {
 			$('#weekday-selector-toggle').prop('checked', true).change();
 		}
-	    $('#weekday-selector-toggle').change(function() {
+
+		if (!$('#date-from-selector').find('input[type="text"]').val()) {
+			$('#date-from-selector').hide();
+		} else {
+			$('#date-from-selector-toggle').prop('checked', true).change();
+		}
+
+		if (!$('#date-to-selector').find('input[type="text"]').val()) {
+			$('#date-to-selector').hide();
+		} else {
+			$('#date-to-selector-toggle').prop('checked', true).change();
+		}
+
+        $('input[data-toggle-container]').change(function() {
+            var container = $( '#' + $(this).attr('data-toggle-container') );
 			if ($(this).prop('checked')) {
-				$('.weekday-selector').fadeIn();
+				container.fadeIn();
 			} else {
-				$('.weekday-selector').fadeOut();
+				container.fadeOut();
 			}
 		});
+
 		$('.colorpicker-component').colorpicker({
 			 colorSelectors: { 'black': '#000000', 'white': '#ffffff', 'red': '#FF0000', 'default': '#777777', 'primary': '#337ab7', 'success': '#5cb85c', 'info': '#5bc0de', 'warning': '#f0ad4e', 'danger': '#d9534f' }
 		});
+
 		tinymce.init({ selector:'textarea',
 			menubar: false,
 			height: 400,

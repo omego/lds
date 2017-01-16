@@ -8,6 +8,9 @@ return [
 	'style_options'      => 'Stil',
 	'publish'			 => 'Veröffentlichen',
 	'unpublish'          => 'Veröffentlichung rückgängig machen',
+    'date_and_time'     => 'Datum und Zeit',
+    'not_show_before_date' => 'Nicht vor Datum anzeigen',
+    'not_show_after_date' => 'Nach Datum nicht mehr anzeigen',
 
     'channel'            => 'Kanal',
     'channels'           => 'Kanäle',
