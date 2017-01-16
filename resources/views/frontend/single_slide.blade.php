@@ -1,3 +1,3 @@
-<div class="slide" style="background-color: {{ $slide->background_color }}">
+<div class="slide" {!! $slide->getStyleArg() !!}>
 	{!! $slide->content !!}
 </div>
