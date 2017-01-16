@@ -24,7 +24,7 @@ class StoreChannel extends FormRequest
     public function rules()
     {
         return [
-			'name' => 'required|max:255',
+			'name' => 'required|max:255|unique:channels,name' . (isset($this->channel) ? ','.$this->channel->id : ''),
         ];
     }
 }
