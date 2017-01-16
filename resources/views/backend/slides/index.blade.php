@@ -27,14 +27,22 @@
 						})->implode(', ') }}</td>
 						<td class="fit text-center">
 							@if ($slide->published) 
-								<a href="{{ route('backend.slides.unpublish', $slide) }}" title="@lang('ds.unpublish')"><i class="fa fa-check text-success"></i></a>
-							@else
-								<a href="{{ route('backend.slides.publish', $slide) }}" title="@lang('ds.publish')"><i class="fa fa-times text-muted"></i></a>
+    							{!! Form::open([ 'method' => 'put', 'route' => ['backend.slides.unpublish', $slide] ]) !!}
+                                	<button type="submit" class="btn btn-xs btn-link delete-submit" title="@lang('ds.unpublish')"><i class="fa fa-check text-success"></i></button>
+								{!! Form::close() !!}
+                            @else
+        						{!! Form::open([ 'method' => 'put', 'route' => ['backend.slides.publish', $slide] ]) !!}
+                            		<button type="submit" class="btn btn-xs btn-link delete-submit" title="@lang('ds.publish')"><i class="fa fa-times text-muted"></i></button>
+    							{!! Form::close() !!}
 							@endif
 						</td>
 						<td class="fit" title="{{ $slide->updated_at->format(config('app.date_format')) }}">{{ $slide->updated_at->diffForHumans() }}</td>
 						<td class="fit text-center">
+  							<a href="{{ route('backend.slides.edit', $slide) }}" title="@lang('base.edit')"><i class="fa fa-pencil"></i></a> &nbsp;
 							<a href="{{ route('frontend.slide', $slide) }}" title="@lang('ds.frontend_view')" target="_blank"><i class="fa fa-eye"></i></a>
+							{!! Form::open([ 'method' => 'delete', 'route' => ['backend.slides.destroy', $slide] ]) !!}
+								<button type="submit" class="btn btn-xs btn-link delete-submit" title="@lang('base.delete')"><i class="fa fa-trash"></i></button> 
+							{!! Form::close() !!}
 						</td>
 					</tr>
 				@endforeach

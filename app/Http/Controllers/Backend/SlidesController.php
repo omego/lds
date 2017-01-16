@@ -74,4 +74,12 @@ class SlidesController extends Controller
 		return redirect()->route('backend.slides')
 				->with('success', trans('ds.slide_unpublished'));
     }
+
+    public function destroy(Slide $slide)
+    {
+		$slide->delete();
+
+		return redirect()->route('backend.slides')
+				->with('success', trans('ds.slide_deleted'));
+    }
 }

@@ -45,6 +45,7 @@ Route::delete('/backend/channels/destroy/{channel}', 'Backend\ChannelsController
 
 Route::get('/backend/slides', 'Backend\SlidesController@index')->name('backend.slides');
 Route::get('/backend/slides/edit/{slide}', 'Backend\SlidesController@edit')->name('backend.slides.edit');
-Route::post('/backend/slides/edit/{slide}', 'Backend\SlidesController@update')->name('backend.slides.update');
-Route::get('/backend/slides/publish/{slide}', 'Backend\SlidesController@publish')->name('backend.slides.publish');
-Route::get('/backend/slides/unpublish/{slide}', 'Backend\SlidesController@unpublish')->name('backend.slides.unpublish');
+Route::put('/backend/slides/edit/{slide}', 'Backend\SlidesController@update')->name('backend.slides.update');
+Route::put('/backend/slides/publish/{slide}', 'Backend\SlidesController@publish')->name('backend.slides.publish');
+Route::put('/backend/slides/unpublish/{slide}', 'Backend\SlidesController@unpublish')->name('backend.slides.unpublish');
+Route::delete('/backend/slides/destroy/{slide}', 'Backend\SlidesController@destroy')->name('backend.slides.destroy');

@@ -7,7 +7,7 @@
 	
 	@include('components.messages.validation')
 
-	{!! Form::model($slide, ['route' => ['backend.slides.update', $slide]]) !!}
+	{!! Form::model($slide, [  'method' => 'put', 'route' => ['backend.slides.update', $slide] ]) !!}
 		<div class="row">
 			<div class="col-md-8">
 				{{ Form::bsText('name', null, trans('base.name')) }}
