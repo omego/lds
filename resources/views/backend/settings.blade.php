@@ -12,8 +12,9 @@
 		<div>
 			<!-- Nav tabs -->
 			<ul class="nav nav-tabs" role="tablist">
-			  <li role="presentation" class="active"><a href="#slider" aria-controls="slider" role="tab" data-toggle="tab">Slider</a></li>
-			  <li role="presentation"><a href="#dock" aria-controls="dock" role="tab" data-toggle="tab">Dock</a></li>
+			  <li role="presentation" class="active"><a href="#slider" aria-controls="slider" role="tab" data-toggle="tab">@lang('ds.slider')</a></li>
+			  <li role="presentation"><a href="#style" aria-controls="style" role="tab" data-toggle="tab">@lang('ds.slide_style')</a></li>
+			  <li role="presentation"><a href="#dock" aria-controls="dock" role="tab" data-toggle="tab">@lang('ds.dock')</a></li>
 			</ul>
 
 			<!-- Tab panes -->
@@ -27,30 +28,37 @@
                     {{ Form::bsNumber('slider_transition_duration', Setting::get('slider_transition_duration', 500), trans('ds.slider_transition_duration'), [ 'min' => 0 ]) }}
 
 				</div>
-                
+
+                <!-- Style -->
+				<div role="tabpanel" class="tab-pane" id="style">
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <!-- Slide background color -->
+                            {{ Form::bsColor('style_slide_background_color', Setting::get('style_slide_background_color'), trans('base.background_color')) }}
+                        </div>
+                        <div class="col-md-6">
+                            <!-- Slide foreground color -->
+                            {{ Form::bsColor('style_slide_foreground_color', Setting::get('style_slide_foreground_color'), trans('base.foreground_color')) }}
+                        </div>
+                    </div>
+
+				</div>
+
                 <!-- Dock -->
 				<div role="tabpanel" class="tab-pane" id="dock">
 					
+                    <!-- Dock enable -->
                     {{ Form::bsCheckbox( 'dock_show', 1, trans('ds.show_dock'), Setting::get('dock_show', false) ) }}
 
                     <div class="row">
                         <div class="col-md-6">
                             <!-- Dock background color -->
-                            <div class="form-group">
-                                {{ Form::label('dock_background_color', trans('base.background_color'), ['class' => 'control-label']) }}
-                                <div class="input-group colorpicker-component">
-                                    {{ Form::text('dock_background_color', Setting::get('dock_background_color', null), ['class' => 'form-control']) }} <span class="input-group-addon"><i></i></span>
-                                </div>
-                            </div>                         
+                            {{ Form::bsColor('dock_background_color', Setting::get('dock_background_color'), trans('base.background_color')) }}
                         </div>
                         <div class="col-md-6">
                             <!-- Dock foreground color -->
-                            <div class="form-group">
-                                {{ Form::label('dock_foreground_color', trans('base.foreground_color'), ['class' => 'control-label']) }}
-                                <div class="input-group colorpicker-component">
-                                    {{ Form::text('dock_foreground_color', Setting::get('dock_foreground_color', null), ['class' => 'form-control']) }} <span class="input-group-addon"><i></i></span>
-                                </div>
-                            </div>
+                            {{ Form::bsColor('dock_foreground_color', Setting::get('dock_foreground_color'), trans('base.foreground_color')) }}
                         </div>
                     </div>
 				</div>

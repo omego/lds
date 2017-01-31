@@ -42,8 +42,11 @@ return [
 
 	'settings'           => 'Settings',
 	'settings_updated'   => 'Settings has been updated!',
+    'slider'             => 'Slider',
 	'slider_display_duration'    => 'Slide display duration (ms)',
 	'slider_transition_duration' => 'Slide transition duration (ms)',
+    'slide_style'        => 'Slide styling',
+    'dock'               => 'Dock',
     'show_dock'          => 'Show dock',
 
 ];

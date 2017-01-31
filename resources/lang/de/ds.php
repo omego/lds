@@ -42,8 +42,11 @@ return [
 	
 	'settings'           => 'Einstellungen',
 	'settings_updated'   => 'Die Einstellungen wurden aktualisiert!',
+    'slider'             => 'Slider',
 	'slider_display_duration'    => 'Anzeigedauer einer Folie (ms)',
 	'slider_transition_duration' => 'Dauer des Folienübergangs (ms)',
+    'slide_style'        => 'Folienstil',
+    'dock'               => 'Dock',
     'show_dock'          => 'Dock anzeigen',
 
 ];

@@ -6,6 +6,7 @@
 	<h2>@lang('ds.edit_slide')</h2>
 	
 	@include('components.messages.validation')
+	@include('components.messages.success')   
 
 	{!! Form::model($slide, [  'method' => 'put', 'route' => ['backend.slides.update', $slide] ]) !!}
 		<div class="row">
@@ -23,7 +24,7 @@
 					<div class="panel-body">
                         <button type="submit" class="btn btn-primary"><i class="fa fa-check"></i> @lang('base.save')</button> 
                         <a href="{{ route('frontend.slide', [ $slide ] ) }}" target="_blank" class="btn btn-default"><i class="fa fa-eye"></i> @lang('ds.frontend_view')</a>
-                        <a href="{{ route('backend.slides') }}" class="btn btn-default"><i class="fa fa-times"></i></a>
+                        <a href="{{ route('backend.slides') }}" class="btn btn-default pull-right"><i class="fa fa-times"></i></a>
 					</div>
 				</div>
 		
@@ -74,12 +75,7 @@
 				<div class="panel panel-default">
 					<div class="panel-heading">@lang('ds.style_options')</div>
 					<div class="panel-body">
-						<div class="form-group">
-							{{ Form::label('background_color', trans('base.background_color'), ['class' => 'control-label']) }}
-							<div class="input-group colorpicker-component">
-								{{ Form::text('background_color', null, ['class' => 'form-control']) }} <span class="input-group-addon"><i></i></span>
-							</div>
-						</div>
+						{{ Form::bsColor('background_color') }}
 						{{ Form::bsText('background_image', null, trans('base.background_image')) }}
 					</div>
 				</div>

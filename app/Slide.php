@@ -42,19 +42,23 @@ class Slide extends Model
                 ( $this->date_to == null || $this-> date_to > time() );
     }
     
-	public function getStyleArg() {
-		$styles = [];
+	public function getStyleArg($styles = []) {
 		if (!empty($this->background_color)) {
 			$styles[ 'background-color' ] = $this->background_color;
 		}
 		if (!empty($this->background_image)) {
 			$styles[ 'background-image' ] = 'url(\''.$this->background_image . '\')';
 		}
-		if (count($styles) > 0) {
+        $notEmptyStyles = array_filter($styles, function($value) {
+            return $value !== ''; 
+        });
+		if (count($notEmptyStyles) > 0) {
 			return ' style="' . implode('; ', array_map(
-					function ($k, $v) { return $k . ': ' . $v; },
-					array_keys($styles),
-					array_values($styles)
+					function ($k, $v) { 
+                        return $k . ': ' . $v;
+                    },
+					array_keys($notEmptyStyles),
+					array_values($notEmptyStyles)
 			)) . '"';
 		}
 		return '';

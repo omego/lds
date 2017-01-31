@@ -53,7 +53,7 @@ class SlidesController extends Controller
 		$slide->channels()->sync($request->channels ?: []);
 		$slide->save();
 
-		return redirect()->route('backend.slides')
+		return redirect()->route('backend.slides.edit', $slide)
 				->with('success', trans('ds.slide_updated') . ' <a href="' . route('frontend.slide', $slide) . '" target="_blank">' . trans('base.show') .'</a>');
     }
 

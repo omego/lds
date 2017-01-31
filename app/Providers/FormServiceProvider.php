@@ -27,6 +27,7 @@ class FormServiceProvider extends ServiceProvider
 		Form::component('bsMultiSelect', 'components.form.multi_select', ['name', 'items' => [], 'value' => null, 'attributes' => []]);
 		Form::component('deleteCancelButtons', 'components.form.delete_cancel_buttons', ['cancel_target']);
 		Form::component('bsMultiCheckbox', 'components.form.multi_checkbox', ['name', 'elements', 'label' => null]);
+		Form::component('bsColor', 'components.form.color', ['name', 'value', 'label' => null, 'attributes' => [], 'help']);
     }
 
     /**
