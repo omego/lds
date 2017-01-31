@@ -33,6 +33,22 @@ body.backend {
     margin-left: 90px;
 }
 
+.date-from-selector,
+.date-to-selector {
+    margin-left: 83px;
+}
+
+.date-from-selector label,
+.date-to-selector label {
+    display: none;
+}
+
+.weekday-selector + .checkbox,
+.date-from-selector + .checkbox,
+.date-to-selector + .checkbox {
+    margin-top: -5px;
+}
+
 /*
 * Tables
 */
