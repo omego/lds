@@ -10,26 +10,15 @@
 	{!! Form::model($slide, [  'method' => 'put', 'route' => ['backend.slides.update', $slide] ]) !!}
 		<div class="row">
 			<div class="col-md-8">
+                
+                <!-- Content -->
 				{{ Form::bsText('name', null, trans('base.name')) }}
 				{{ Form::bsTextarea('content', null, trans('base.content')) }}
-                
-
-				<div class="panel panel-default">
-					<div class="panel-heading">@lang('ds.style_options')</div>
-					<div class="panel-body">
-						<div class="form-group">
-							{{ Form::label('background_color', trans('base.background_color'), ['class' => 'control-label']) }}
-							<div class="input-group colorpicker-component">
-								{{ Form::text('background_color', null, ['class' => 'form-control']) }} <span class="input-group-addon"><i></i></span>
-							</div>
-						</div>
-						{{ Form::bsText('background_image', null, trans('base.background_image')) }}
-					</div>
-				</div>
-                
+               
 			</div>
 			<div class="col-md-4">
 
+                <!-- Buttons -->
                 <div class="panel panel-default">
 					<div class="panel-body">
                         <button type="submit" class="btn btn-primary"><i class="fa fa-check"></i> @lang('base.save')</button> 
@@ -38,6 +27,7 @@
 					</div>
 				</div>
 		
+                <!-- Display options -->
 				<div class="panel panel-default">
 					<div class="panel-heading">@lang('ds.display_options')</div>
 					<div class="panel-body">
@@ -72,6 +62,7 @@
                     </div>
 				</div>
 
+                <!-- Channels -->
 				<div class="panel panel-default">
 					<div class="panel-heading">@lang('ds.channels')</div>
 					<div class="panel-body">
@@ -79,6 +70,20 @@
 					</div>
 				</div>
 
+                <!-- Style -->
+				<div class="panel panel-default">
+					<div class="panel-heading">@lang('ds.style_options')</div>
+					<div class="panel-body">
+						<div class="form-group">
+							{{ Form::label('background_color', trans('base.background_color'), ['class' => 'control-label']) }}
+							<div class="input-group colorpicker-component">
+								{{ Form::text('background_color', null, ['class' => 'form-control']) }} <span class="input-group-addon"><i></i></span>
+							</div>
+						</div>
+						{{ Form::bsText('background_image', null, trans('base.background_image')) }}
+					</div>
+				</div>
+                
 			</div>
 		</div>
 	{!! Form::close() !!}

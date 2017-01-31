@@ -22,9 +22,9 @@
 				@foreach ($slides->sortByDesc('updated_at') as $slide)
 					<tr>
 						<td><a href="{{ route('backend.slides.edit', $slide) }}">{{ $slide->name }}</a></td>
-						<td class="fit">{{ $slide->channels->map(function ($item, $key) {
-							return $item->name;
-						})->implode(', ') }}</td>
+						<td class="fit">{!! $slide->channels->map(function ($item, $key) {
+							return '<a href="' . route('frontend.channel', $item) . '" target="_blank">' . $item->name . '</a>';
+						})->implode(', ') !!}</td>
 						<td class="fit text-center">
 							@if ($slide->published) 
     							{!! Form::open([ 'method' => 'put', 'route' => ['backend.slides.unpublish', $slide] ]) !!}
