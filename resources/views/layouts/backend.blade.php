@@ -63,6 +63,9 @@
 	<div class="container">
 		@yield('content')
 	</div>
+    <footer class="footer container text-center">
+        <small class="text-muted">Digital Signage Web Application &copy 2017 <a href="http://nicu.ch" target="_blank">Nicolas Perrenoud</a></small>
+    </footer>
     <script src="{{asset('js/backend.js')}}"></script>
     
 @endsection
