@@ -30,5 +30,7 @@ return [
     'current_password'    => 'Aktuelles Passwort',
     'new_password'        => 'Neues Passwort',
     'repeat_new_password' => 'Neues Passwort wiederholen',
+    'user_account_updated' => 'Der Benutzeraccount wurde aktualisiert.',
+    'password_updated'     => 'Das Passwort wurde geändert.',
 
 ];

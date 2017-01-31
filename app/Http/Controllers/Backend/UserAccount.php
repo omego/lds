@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreUserAccount;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class UserAccount extends Controller
 {
@@ -32,12 +33,18 @@ class UserAccount extends Controller
 
     public function update(StoreUserAccount $request)
     {
+        $msg = trans('base.user_account_updated');
+
         $user = Auth::user();
         $user->name = $request->name;
         $user->email = $request->email;
+        if (!empty($request->newPassword)) {
+            $user->password = Hash::make($request->newPassword);
+            $msg .= ' ' . trans('base.password_updated');
+        }
         $user->save();
         
 		return redirect()->route('backend.account')
-				->with('success', trans('ds.settings_updated'));
+				->with('success', $msg);
     }
 }

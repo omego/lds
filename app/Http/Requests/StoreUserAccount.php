@@ -24,10 +24,11 @@ class StoreUserAccount extends FormRequest
      */
     public function rules()
     {
-        $user = Auth::user();
         return [
-			'name' => 'required|max:255|unique:users,name' . (isset($user) ? ','.$user->id : ''),
-            'email' => 'required|max:255|unique:users,email' . (isset($user) ? ','.$user->id : ''),
+			'name' => 'required|max:255|unique:users,name,' . Auth::id(),
+            'email' => 'required|max:255|unique:users,email,' . Auth::id(),
+            'currentPassword' => 'required_with:newPassword|old_password:' . Auth::user()->password,
+            'newPassword' => 'min:6|confirmed|different:currentPassword',
         ];
     }
 }

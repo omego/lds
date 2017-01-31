@@ -24,9 +24,9 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">@lang('base.change_password')</div>
                     <div class="panel-body">
-                        {{ Form::bsPassword('password', trans('base.current_password')) }}
-                        {{ Form::bsPassword('new_password', trans('base.new_password')) }}
-                        {{ Form::bsPassword('new_password2', trans('base.repeat_new_password')) }}
+                        {{ Form::bsPassword('currentPassword', trans('base.current_password')) }}
+                        {{ Form::bsPassword('newPassword', trans('base.new_password')) }}
+                        {{ Form::bsPassword('newPassword_confirmation', trans('base.repeat_new_password')) }}
                     </div>
                 </div>
             </div>
