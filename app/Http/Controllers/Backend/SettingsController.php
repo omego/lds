@@ -33,7 +33,8 @@ class SettingsController extends Controller
 		\Setting::set('slider_transition_duration', $request->slider_transition_duration);
         \Setting::set('style_slide_background_color', $request->style_slide_background_color);
         \Setting::set('style_slide_foreground_color', $request->style_slide_foreground_color);
-        \Setting::set('style_slide_font_size', $request->style_slide_font_size);        
+        \Setting::set('style_slide_font_size', $request->style_slide_font_size);
+        \Setting::set('style_slide_font_size_type', $request->style_slide_font_size_type);
         \Setting::set('dock_show', isset($request->dock_show));
         \Setting::set('dock_background_color', $request->dock_background_color);
         \Setting::set('dock_foreground_color', $request->dock_foreground_color);

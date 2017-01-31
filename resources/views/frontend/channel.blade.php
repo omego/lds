@@ -11,7 +11,7 @@
 		</div>
 	@else
 		<div class="no-slides">
-			<p>No slides in this channel!</p>
+			<p>@lang('ds.no_slides_in_this_channel')</p>
 		</div>
 	@endif
     @if (Setting::get('dock_show', false))

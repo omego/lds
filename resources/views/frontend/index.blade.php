@@ -31,7 +31,7 @@
 						@endif	
 					@else
 						<p class="text-success">@lang('base.hello_admin_you_are_logged_in', [ 'name' => Auth::user()->name ])</p>
-						<a href="{{ route('backend.dashboard') }}" class="btn btn-primary"><i class="fa fa-cogs"></i> Go to Backend</a>
+						<a href="{{ route('backend.dashboard') }}" class="btn btn-primary"><i class="fa fa-cogs"></i> @lang('base.go_to_backend')</a>
 					@endif
 				</div>
 			</div>

@@ -19,7 +19,12 @@ return [
 	'background_image' => 'Hintergrundbild',
 	'background_color' => 'Hintergrundfarbe',
 	'foreground_color' => 'Vordergrundfarbe',
-    'font_size_px'     => 'Schriftgrösse (Pixel)',
+    'font_size'        => 'Schriftgrösse',
+    'pixel'            => 'Pixel',
+    'point'            => 'Punkt',
+    'viewport_width'   => 'Viewport-Breite',
+    'viewport_height'  => 'Viewport-Höhe',    
+    'type'             => 'Typ',    
 
 	'invalid_input'    => 'Ungültige Eingabe!',
 	
@@ -33,5 +38,6 @@ return [
     'repeat_new_password' => 'Neues Passwort wiederholen',
     'user_account_updated' => 'Der Benutzeraccount wurde aktualisiert.',
     'password_updated'     => 'Das Passwort wurde geändert.',
+    'go_to_backend'        => 'Gehe zum Backend',
 
 ];

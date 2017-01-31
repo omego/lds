@@ -43,7 +43,16 @@
                         </div>
                     </div>
 
-                    {{ Form::bsNumber('style_slide_font_size', Setting::get('style_slide_font_size'), trans('base.font_size_px'), [ 'min' => 0, 'placeholder' => 14, 'step' => 0.1 ]) }}
+                    <div class="row">
+                        <div class="col-md-8">
+                            <!-- Font size -->
+                            {{ Form::bsNumber('style_slide_font_size', Setting::get('style_slide_font_size'), trans('base.font_size'), [ 'min' => 0, 'placeholder' => 14, 'step' => 0.1 ]) }}
+                        </div>
+                        <div class="col-md-4">
+                            <!-- Font size type -->
+                            {{ Form::bsSelect('style_slide_font_size_type', [ 'px' => trans('base.pixel'), 'pt' => trans('base.point'), 'vw' => trans('base.viewport_width'), 'vh' => trans('base.viewport_height') ], Setting::get('style_slide_font_size_type'), trans('base.type')) }}
+                        </div>
+                    </div>
                     
 				</div>
 

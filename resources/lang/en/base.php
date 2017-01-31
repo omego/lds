@@ -19,7 +19,12 @@ return [
 	'background_image' => 'Background image',
 	'background_color' => 'Background color',
 	'foreground_color' => 'Foreground color',
-    'font_size_px'     => 'Font size (Pixel)',
+    'font_size'        => 'Font size',
+    'pixel'            => 'Pixel',
+    'point'            => 'Point',
+    'viewport_width'   => 'Viewport Width',
+    'viewport_height'  => 'Viewport Height',    
+    'type'             => 'Type',    
 
 	'invalid_input'    => 'Invalid input!',
 	
@@ -33,5 +38,6 @@ return [
     'repeat_new_password' => 'Repeat new password',
     'user_account_updated' => 'The user account has been updated.',
     'password_updated'     => 'The password has been changed.',
+    'go_to_backend'        => 'Go to Backend',
 
 ];

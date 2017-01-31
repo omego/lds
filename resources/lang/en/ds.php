@@ -24,6 +24,7 @@ return [
 	'frontend_view'      => 'Frontend view',
 	'channel_url'        => 'Channel URL',
 	'really_delete_this_channel' => 'Do you really want to delete this channel?',
+    'no_slides_in_this_channel'  => 'No slides in this channel!',
 
     'slide'              => 'Slide',
     'slides'             => 'Slides',

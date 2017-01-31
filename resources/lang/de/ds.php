@@ -24,6 +24,7 @@ return [
 	'frontend_view'      => 'Frontend-Ansicht',
 	'channel_url'        => 'Kanal-URL',
 	'really_delete_this_channel' => 'Möchten Sie diesen Kanal wirklich löschen?',
+    'no_slides_in_this_channel'  => 'Keine Folien in diesem Kanal!',
 
     'slide'              => 'Folie',
     'slides'             => 'Folien',
