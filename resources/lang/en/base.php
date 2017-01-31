@@ -19,6 +19,7 @@ return [
 	'background_image' => 'Background image',
 	'background_color' => 'Background color',
 	'foreground_color' => 'Foreground color',
+    'font_size_px'     => 'Font size (Pixel)',
 
 	'invalid_input'    => 'Invalid input!',
 	

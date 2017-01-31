@@ -43,6 +43,8 @@
                         </div>
                     </div>
 
+                    {{ Form::bsNumber('style_slide_font_size', Setting::get('style_slide_font_size'), trans('base.font_size_px'), [ 'min' => 0, 'placeholder' => 14, 'step' => 0.1 ]) }}
+                    
 				</div>
 
                 <!-- Dock -->

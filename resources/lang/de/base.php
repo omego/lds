@@ -19,6 +19,7 @@ return [
 	'background_image' => 'Hintergrundbild',
 	'background_color' => 'Hintergrundfarbe',
 	'foreground_color' => 'Vordergrundfarbe',
+    'font_size_px'     => 'Schriftgrösse (Pixel)',
 
 	'invalid_input'    => 'Ungültige Eingabe!',
 	
