@@ -40,6 +40,10 @@
 
 						<ul class="dropdown-menu" role="menu">
 							<li>
+								<a href="{{ route('backend.account') }}">@lang('base.user_account')</a>
+                            </li>
+                            <li role="separator" class="divider"></li>
+                            <li>
 								<a href="{{ url('/logout') }}"
 									onclick="event.preventDefault();
 											 document.getElementById('logout-form').submit();">

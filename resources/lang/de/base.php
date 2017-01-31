@@ -12,6 +12,7 @@ return [
 	'show_all'         => 'Alle anzeigen',
 
     'name'             => 'Name',
+    'email'            => 'E-Mail',
 	'content'          => 'Inhalt',
     'last_changed'     => 'Zuletzt geändert',
 	'actions'          => 'Aktionen',
@@ -23,5 +24,11 @@ return [
 	
 	'hello_admin_you_are_logged_in' => 'Hallo :Name, du bist bereits eingeloggt.',
 	'please_create_new_admin_user' => 'Bitte erstelle einen neuen Administrator-Benutzer:',
+    'user_account'    => 'Benutzeraccount',
+    'user_data'       => 'Benutzerdaten',
+    'change_password'     => 'Passwort ändern',
+    'current_password'    => 'Aktuelles Passwort',
+    'new_password'        => 'Neues Passwort',
+    'repeat_new_password' => 'Neues Passwort wiederholen',
 
 ];

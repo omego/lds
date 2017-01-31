@@ -21,6 +21,7 @@ Route::get('/slides/{slide}', 'FrontendController@showSlide')->name('frontend.sl
 Route::post('login', 'Auth\LoginController@login');
 Route::post('logout', 'Auth\LoginController@logout');
 
+
 // Registration Routes...
 //Route::get('register', 'Auth\RegisterController@showRegistrationForm');
 Route::post('register', 'Auth\RegisterController@register');
@@ -30,6 +31,9 @@ Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm'
 Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail');
 Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm');
 Route::post('password/reset', 'Auth\ResetPasswordController@reset');
+
+Route::get('/backend/account', 'Backend\UserAccount@index')->name('backend.account');
+Route::post('/backend/account', 'Backend\UserAccount@update')->name('backend.account.update');
 
 Route::get('/backend', 'Backend\DashboardController@index')->name('backend.dashboard');
 
