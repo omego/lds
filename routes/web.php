@@ -42,7 +42,7 @@ Route::post('/backend/settings', 'Backend\SettingsController@update')->name('bac
 
 Route::get('/backend/channels', 'Backend\ChannelsController@index')->name('backend.channels');
 Route::get('/backend/channels/create', 'Backend\ChannelsController@create')->name('backend.channels.create');
-Route::post('/backend/channels/store', 'Backend\ChannelsController@store')->name('backend.channels.store');
+Route::post('/backend/channels', 'Backend\ChannelsController@store')->name('backend.channels.store');
 Route::get('/backend/channels/edit/{channel}', 'Backend\ChannelsController@edit')->name('backend.channels.edit');
 Route::put('/backend/channels/edit/{channel}', 'Backend\ChannelsController@update')->name('backend.channels.update');
 Route::delete('/backend/channels/destroy/{channel}', 'Backend\ChannelsController@destroy')->name('backend.channels.destroy');
