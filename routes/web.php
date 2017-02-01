@@ -48,6 +48,8 @@ Route::put('/backend/channels/edit/{channel}', 'Backend\ChannelsController@updat
 Route::delete('/backend/channels/destroy/{channel}', 'Backend\ChannelsController@destroy')->name('backend.channels.destroy');
 
 Route::get('/backend/slides', 'Backend\SlidesController@index')->name('backend.slides');
+Route::get('/backend/slides/create', 'Backend\SlidesController@create')->name('backend.slides.create');
+Route::post('/backend/slides', 'Backend\SlidesController@store')->name('backend.slides.store');
 Route::get('/backend/slides/edit/{slide}', 'Backend\SlidesController@edit')->name('backend.slides.edit');
 Route::put('/backend/slides/edit/{slide}', 'Backend\SlidesController@update')->name('backend.slides.update');
 Route::put('/backend/slides/publish/{slide}', 'Backend\SlidesController@publish')->name('backend.slides.publish');

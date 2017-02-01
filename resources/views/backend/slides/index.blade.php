@@ -3,7 +3,11 @@
 @section('title', trans('ds.slides'))
 
 @section('content')
-	<h2>@lang('ds.slides')</h2>
+	<h2>@lang('ds.slides')
+		<span class="pull-right">
+			<a href="{{ route('backend.slides.create') }}" class="btn btn-default"><i class="fa fa-plus-circle"></i> @lang('ds.create_slide')</a>
+		</span>
+	</h2>
 
 	@include('components.messages.success')
 

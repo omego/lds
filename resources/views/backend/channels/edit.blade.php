@@ -10,5 +10,5 @@
 	</p>
 
 	@include('backend.channels.form', [ 'form_method' => 'put', 'form_route' => ['backend.channels.update', $channel], 'channel' => $channel ])
-	
+
 @endsection
