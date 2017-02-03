@@ -55,3 +55,10 @@ Route::put('/backend/slides/edit/{slide}', 'Backend\SlidesController@update')->n
 Route::put('/backend/slides/publish/{slide}', 'Backend\SlidesController@publish')->name('backend.slides.publish');
 Route::put('/backend/slides/unpublish/{slide}', 'Backend\SlidesController@unpublish')->name('backend.slides.unpublish');
 Route::delete('/backend/slides/destroy/{slide}', 'Backend\SlidesController@destroy')->name('backend.slides.destroy');
+
+Route::get('/backend/users', 'Backend\UsersController@index')->name('backend.users');
+Route::get('/backend/users/create', 'Backend\UsersController@create')->name('backend.users.create');
+Route::post('/backend/users', 'Backend\UsersController@store')->name('backend.users.store');
+Route::get('/backend/users/edit/{user}', 'Backend\UsersController@edit')->name('backend.users.edit');
+Route::put('/backend/users/edit/{user}', 'Backend\UsersController@update')->name('backend.users.update');
+Route::delete('/backend/users/destroy/{user}', 'Backend\UsersController@destroy')->name('backend.users.destroy');

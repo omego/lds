@@ -40,4 +40,16 @@ return [
     'password_updated'     => 'Das Passwort wurde geändert.',
     'go_to_backend'        => 'Gehe zum Backend',
 
+	'users'           => 'Benutzer',
+	'create_user'     => 'Benutzer erstellen',
+	'edit_user'       => 'Benutzer bearbeiten',
+	'delete_user'     => 'Benutzer löschen',
+	'no_users_added'  => 'Es wurden noch keine Benutzer hinzugefügt.',
+	'really_delete_this_user'  => 'Soll dieser Benutzer wirklich gelöscht werden?',
+	'user_created'    => 'Benutzer wurde erstellt.',
+	'user_updated'    => 'Benutzer wurde aktualisiert.',
+	'user_deleted'    => 'Benutzer wurde gelöscht.',
+	'generated_password_is' => 'Das Passwort ist <code>:password</code>',
+	'cannot_delete_own_user_account' => 'Der eigene Benutzeraccount kann nicht gelöscht werden!',
+
 ];

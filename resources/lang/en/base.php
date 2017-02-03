@@ -40,4 +40,16 @@ return [
     'password_updated'     => 'The password has been changed.',
     'go_to_backend'        => 'Go to Backend',
 
+	'users'           => 'Users',
+	'create_user'     => 'Create User',
+	'edit_user'       => 'Edit User',
+	'delete_user'     => 'Delete User',
+	'no_users_added'  => 'No users have been added.',
+	'really_delete_this_user'  => 'Do you relly want to delete this user?',
+	'user_created'    => 'User has been created.',
+	'user_updated'    => 'User has been updated',
+	'user_deleted'    => 'User has been deleted.',
+	'generated_password_is' => 'The password is <code>:password</code>',
+	'cannot_delete_own_user_account' => 'It is not possible to delete its own user account!',
+	
 ];
