@@ -16,7 +16,7 @@
                 <div class="panel panel-default">
 					<div class="panel-body">
                         <button type="submit" class="btn btn-primary"><i class="fa fa-check"></i> @lang('base.save')</button> 
-                        <a href="{{ route('frontend.slide', [ $slide ] ) }}" target="_blank" class="btn btn-default"><i class="fa fa-eye"></i> @lang('ds.frontend_view')</a>
+                        @if ($slide)<a href="{{ route('frontend.slide', [ $slide ] ) }}" target="_blank" class="btn btn-default"><i class="fa fa-eye"></i> @lang('ds.frontend_view')</a>@endif
                         <a href="{{ route('backend.slides') }}" class="btn btn-default pull-right"><i class="fa fa-times"></i></a>
 					</div>
 				</div>
