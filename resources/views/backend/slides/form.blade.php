@@ -1,37 +1,37 @@
 	@include('components.messages.validation')
-	@include('components.messages.success')   
+	@include('components.messages.success')
 
 	{!! Form::model($slide, [ 'method' => $form_method, 'route' => $form_route ]) !!}
 		<div class="row">
 			<div class="col-md-8">
-                
+
                 <!-- Content -->
 				{{ Form::bsText('name', null, trans('base.name')) }}
 				{{ Form::bsTextarea('content', null, trans('base.content')) }}
-               
+
 			</div>
 			<div class="col-md-4">
 
                 <!-- Buttons -->
                 <div class="panel panel-default">
 					<div class="panel-body">
-                        <button type="submit" class="btn btn-primary"><i class="fa fa-check"></i> @lang('base.save')</button> 
+                        <button type="submit" class="btn btn-primary"><i class="fa fa-check"></i> @lang('base.save')</button>
                         @if ($slide)<a href="{{ route('frontend.slide', [ $slide ] ) }}" target="_blank" class="btn btn-default"><i class="fa fa-eye"></i> @lang('ds.frontend_view')</a>@endif
                         <a href="{{ route('backend.slides') }}" class="btn btn-default pull-right"><i class="fa fa-times"></i></a>
 					</div>
 				</div>
-		
+
                 <!-- Display options -->
 				<div class="panel panel-default">
 					<div class="panel-heading">@lang('ds.display_options')</div>
 					<div class="panel-body">
 						<div class="checkbox">
 							{{ Form::checkbox('published', '1', null, [ 'id' => 'published', 'data-toggle' => 'toggle', 'data-size' => 'small' ]) }}
-							<label for="published">@lang('ds.published')</label>						  
+							<label for="published">@lang('ds.published')</label>
 						</div>
 
                         <div class="checkbox">
-							<input type="checkbox" data-toggle="toggle" data-size="small" name="weekday_selector_toggle" id="weekday-selector-toggle" value="1"  data-toggle-container="weekday-selector"> 
+							<input type="checkbox" data-toggle="toggle" data-size="small" name="weekday_selector_toggle" id="weekday-selector-toggle" value="1"  data-toggle-container="weekday-selector">
 							<label>@lang('ds.only_show_on_selected_days')</label>
 						</div>
 						<div class="weekday-selector" id="weekday-selector">
@@ -72,7 +72,7 @@
 						{{ Form::bsText('background_image', null, trans('base.background_image')) }}
 					</div>
 				</div>
-                
+
 			</div>
 		</div>
 	{!! Form::close() !!}
@@ -82,7 +82,7 @@
 		if ( ! $('#name').val() ) {
 			$('#name').focus();
 		}
-		
+
 		if ($('#weekday-selector').find('input[type="checkbox"]:checked').length == 0) {
 			$('#weekday-selector').hide();
 		} else {
@@ -118,13 +118,13 @@
 			 colorSelectors: { 'black': '#000000', 'white': '#ffffff', 'red': '#FF0000', 'default': '#777777', 'primary': '#337ab7', 'success': '#5cb85c', 'info': '#5bc0de', 'warning': '#f0ad4e', 'danger': '#d9534f' }
 		});
 
-		tinymce.init({ selector:'textarea',
+		{{-- tinymce.init({ selector:'textarea',
 			menubar: false,
 			height: 400,
 			plugins: [
 			  'link image lists media emoticons textcolor'
 			],
 			toolbar: 'undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image | media fullpage | forecolor backcolor'
-		});
+		}); --}}
 	});
 @endsection
